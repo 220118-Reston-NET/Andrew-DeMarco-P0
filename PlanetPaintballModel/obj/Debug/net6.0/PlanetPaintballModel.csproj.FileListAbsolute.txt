@@ -1,5 +1,0 @@
-C:\Users\andre\Documents\Revature\Andrew DeMarco Activity 1\C#\PaintballPlanet\PlanetPaintballModel\obj\Debug\net6.0\PlanetPaintballModel.csproj.AssemblyReference.cache
-C:\Users\andre\Documents\Revature\Andrew DeMarco Activity 1\C#\PaintballPlanet\PlanetPaintballModel\obj\Debug\net6.0\PlanetPaintballModel.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\andre\Documents\Revature\Andrew DeMarco Activity 1\C#\PaintballPlanet\PlanetPaintballModel\obj\Debug\net6.0\PlanetPaintballModel.AssemblyInfoInputs.cache
-C:\Users\andre\Documents\Revature\Andrew DeMarco Activity 1\C#\PaintballPlanet\PlanetPaintballModel\obj\Debug\net6.0\PlanetPaintballModel.AssemblyInfo.cs
-C:\Users\andre\Documents\Revature\Andrew DeMarco Activity 1\C#\PaintballPlanet\PlanetPaintballModel\obj\Debug\net6.0\PlanetPaintballModel.csproj.CoreCompileInputs.cache

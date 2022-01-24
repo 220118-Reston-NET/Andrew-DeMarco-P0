@@ -12,14 +12,19 @@ namespace PlanetPaintballUI
         {
 
             Console.WriteLine("===Add Customer Menu===");
-            Console.WriteLine("Please enter your name:");
-            //read user input
-            Console.WriteLine("Please enter your address:");
-            //read user input
-            Console.WriteLine("Please enter your email address:");
-            //read user input
-            
+           
+        }
 
+        public string UserChoice()
+        {
+            
+            Console.WriteLine("Please enter your name:");
+            _newCustomer.Name = Console.ReadLine();
+            Console.WriteLine("Please enter your address:");
+            _newCustomer.Address = Console.ReadLine();
+            Console.WriteLine("Please enter your email address:");
+            _newCustomer.Email = Console.ReadLine(); 
+            
         }
 
     }

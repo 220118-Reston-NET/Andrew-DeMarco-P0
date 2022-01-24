@@ -5,7 +5,7 @@ namespace PlanetPaintballModel
     {
 
         public string ProductName { get; set; }
-        public string Product Quantity { get; set; }
+        public string ProductQuantity { get; set; }
 
     }
 

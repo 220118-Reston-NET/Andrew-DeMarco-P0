@@ -16,7 +16,7 @@ namespace PlanetPaintballUI
             //read user input
             Console.WriteLine("Please enter your address:");
             //read user input
-            Console.WriteLine("Please enter your email address:")
+            Console.WriteLine("Please enter your email address:");
             //read user input
             
 

@@ -10,7 +10,7 @@ namespace PlanetPaintballModel
         private List<Products> _products;
         public List<Products> Products
         {
-            get { return _products }
+            get { return _products; }
             set
             {
                 _products = value;
@@ -20,7 +20,7 @@ namespace PlanetPaintballModel
         private List<Orders> _orders;
         public List<Orders> Orders
         {
-            get { return _orders }
+            get { return _orders; }
             set
             {
                 _orders = value;
@@ -34,13 +34,13 @@ namespace PlanetPaintballModel
             Address = "21 Paint St";
             _products = new List<Products>()
             {
-                new Products();
+                new Products()
             };
 
             _orders = new List<Orders>()
             {
-                new Orders();
-            }
+                new Orders()
+            };
 
         }
 

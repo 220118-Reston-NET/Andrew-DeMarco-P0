@@ -20,16 +20,16 @@ while (repeat)
             menu = new AddCustomerMenu();
             break;
         case "ViewInventory":
-            menu = new ViewInventoryMenu();
+            //menu = new ViewInventoryMenu();
             break;
         case "PlaceOrder":
-            menu = new PlaceOrderMenu();
+            //menu = new PlaceOrderMenu();
             break;
         case "ViewOrderHistory":
-            menu = new ViewOrderHistoryMenu();
+            //menu = new ViewOrderHistoryMenu();
             break;
         case "ReplenishInventory":
-            menu = new ReplenishInventoryMenu();
+            //menu = new ReplenishInventoryMenu();
             break;
         case "Exit":
             repeat = false;

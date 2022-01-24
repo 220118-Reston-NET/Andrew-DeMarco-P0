@@ -11,7 +11,7 @@ namespace PlanetPaintballModel
         private List<Orders> _orders;
         public List<Orders> Orders
         {
-            get { return _orders }
+            get { return _orders; }
             set
             {
                 _orders = value;
@@ -21,9 +21,9 @@ namespace PlanetPaintballModel
         public Customer()
         {
             
-            Name = "Johnny Appleseed"
-            Address = "ThisAddress Street"
-            Email = "JohnnyAppleseed@Email.com"
+            Name = "Johnny Appleseed";
+            Address = "ThisAddress Street";
+            Email = "JohnnyAppleseed@Email.com";
             _orders = new List<Orders>()
             {
                 new Orders()

@@ -10,7 +10,7 @@ namespace PlanetPaintballModel
         public List<LineItems> LineItems
         {
 
-            get { return _lineItems }
+            get { return _lineItems; }
             set
             {
                 _lineItems = value;

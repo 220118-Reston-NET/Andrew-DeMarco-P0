@@ -10,14 +10,12 @@ namespace PPUI
 
         private static Customer _newCustomer = new Customer();
 
-
         //Dependency injection
         private IPlanetPaintballBL _planetPaintballBL;
         public AddCustomerMenu(IPlanetPaintballBL p_planetPaintballBL)
         {
             _planetPaintballBL = p_planetPaintballBL;
         }
-
 
         public void Display()
         {
@@ -36,6 +34,10 @@ namespace PPUI
             {
                 case "Y":
                     
+                    //validation uses very simple regex.
+                    //more specific data entry checks either involve more complex regex
+                    //or something like a web service/database to check input against (ie street address checking).
+
                     //prompts user to enter in their first name.
                     //checks user input with regex for a name a-zA-Z
                     //if user cannot type the name within three tries after failing, 
@@ -57,7 +59,6 @@ namespace PPUI
                         firstName = Console.ReadLine();
                         failedAttempts = failedAttempts + 1;
                     }
-
 
                     //prompts user to enter in their last name.
                     //checks user input with regex for a name a-zA-Z
@@ -124,8 +125,6 @@ namespace PPUI
                         failedAttempts = failedAttempts + 1;
                     }
 
-                    
-                    
                     //add all the fields for a customer (name, address, email) to customer object and then to customer database json file
                     _newCustomer.Name = fullName;
                     _newCustomer.Address = address;

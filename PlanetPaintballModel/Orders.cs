@@ -1,26 +1,26 @@
-// namespace PPModel
-// {
+namespace PPModel
+{
 
-//     public class Orders
-//     {
+    public class Orders
+    {
 
-//         public string UserEmail;
+        public string UserEmail;
         
-//         private List<LineItems> _lineItems;
-//         public List<LineItems> LineItems
-//         {
+        private List<LineItems> _lineItems;
+        public List<LineItems> LineItems
+        {
 
-//             get { return _lineItems; }
-//             set
-//             {
-//                 _lineItems = value;
-//             }
+            get { return _lineItems; }
+            set
+            {
+                _lineItems = value;
+            }
 
-//         }
+        }
 
-//         public string StoreFrontLocation;
-//         public int Price;
+        public string StoreFrontLocation;
+        public int Price;
 
-//     }
+    }
 
-// }
+}

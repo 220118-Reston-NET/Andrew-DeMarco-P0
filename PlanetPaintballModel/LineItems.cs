@@ -1,12 +1,12 @@
-namespace PlanetPaintballModel
-{
+// namespace PPModel
+// {
 
-    public class LineItems
-    {
+//     public class LineItems
+//     {
 
-        public string ProductName { get; set; }
-        public string ProductQuantity { get; set; }
+//         public string ProductName { get; set; }
+//         public string ProductQuantity { get; set; }
 
-    }
+//     }
 
-}
+// }

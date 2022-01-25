@@ -1,4 +1,6 @@
-﻿using PlanetPaintballUI;
+﻿using PPBL;
+using PPDL;
+using PPUI;
 
 bool repeat = true;
 
@@ -13,11 +15,14 @@ while (repeat)
 
     switch (ans)
     {
+        case "MainMenu":
+            menu = new MainMenu();
+            break;
         case "AddCustomer":
-            menu = new AddCustomerMenu();
+            menu = new AddCustomerMenu(new PlanetPaintballBL(new Repository()));
             break;
         case "SearchCustomer":
-            menu = new AddCustomerMenu();
+            menu = new SearchCustomerMenu(new PlanetPaintballBL(new Repository()));
             break;
         case "ViewInventory":
             //menu = new ViewInventoryMenu();

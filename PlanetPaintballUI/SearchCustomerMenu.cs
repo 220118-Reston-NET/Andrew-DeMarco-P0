@@ -4,27 +4,25 @@ using PPModel;
 namespace PPUI
 {
 
-    public class AddCustomerMenu : IMenu
+    public class SearchCustomerMenu : IMenu
     {
 
         private static Customer _newCustomer = new Customer();
 
-
         //Dependency injection
         private IPlanetPaintballBL _planetPaintballBL;
-        public AddCustomerMenu(IPlanetPaintballBL p_planetPaintballBL)
+        public SearchCustomerMenu(IPlanetPaintballBL p_planetPaintballBL)
         {
             _planetPaintballBL = p_planetPaintballBL;
         }
 
-
         public void Display()
         {
 
-            Console.WriteLine("===Add Customer Menu===");
-            Console.WriteLine("Did you want to add a new customer?");
+            Console.WriteLine("===Search Customer Menu===");
+            Console.WriteLine("Did you want to search for a customer?");
             Console.WriteLine("Enter Y for yes or N for no:");
-           
+        
         }
 
         public string UserChoice()
@@ -35,14 +33,9 @@ namespace PPUI
             {
                 case "Y":
                     //add functionality so that user has to enter of type Name, address and email
-                    Console.WriteLine("Please enter your name:");
-                    _newCustomer.Name = Console.ReadLine();
-                    Console.WriteLine("Please enter your address:");
-                    _newCustomer.Address = Console.ReadLine();
-                    Console.WriteLine("Please enter your email address:");
-                    _newCustomer.Email = Console.ReadLine();
-                    //add the customer to customer database json file
-                    _planetPaintballBL.AddCustomer(_newCustomer);
+                    Console.WriteLine("Please enter the email of the customer you want to search for:");
+                    string customerEmailInput = Console.ReadLine();
+                    _planetPaintballBL.SearchCustomer(_newCustomer);
                     return "MainMenu";
                 case "N":
                     return "MainMenu";

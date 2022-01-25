@@ -1,4 +1,4 @@
-namespace PlanetPaintballUI
+namespace PPUI
 {
 
     public interface IMenu

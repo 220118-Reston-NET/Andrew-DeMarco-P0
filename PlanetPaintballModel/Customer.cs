@@ -1,4 +1,4 @@
-namespace PlanetPaintballModel
+namespace PPModel
 {
 
     public class Customer
@@ -8,15 +8,15 @@ namespace PlanetPaintballModel
         public string Address { get; set; }
         public string Email { get; set; }
         
-        private List<Orders> _orders;
-        public List<Orders> Orders
-        {
-            get { return _orders; }
-            set
-            {
-                _orders = value;
-            }
-        }
+        //private List<Orders> _orders;
+        //public List<Orders> Orders
+        // {
+        //     get { return _orders; }
+        //     set
+        //     {
+        //         _orders = value;
+        //     }
+        // }
 
         public Customer()
         {
@@ -24,10 +24,10 @@ namespace PlanetPaintballModel
             Name = "Johnny Appleseed";
             Address = "ThisAddress Street";
             Email = "JohnnyAppleseed@Email.com";
-            _orders = new List<Orders>()
-            {
-                new Orders()
-            };
+            // _orders = new List<Orders>()
+            // {
+            //     new Orders()
+            // };
             
         }
 

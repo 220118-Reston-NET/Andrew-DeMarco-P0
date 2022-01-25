@@ -39,6 +39,9 @@ namespace PPUI
                 case "6":
                     return "ReplenishInventory";
                 case "7":
+                    Console.Clear();
+                    Console.WriteLine("Exiting program...");
+                    Console.WriteLine("Goodbye.");
                     return "Exit";
                 default:
                     Console.WriteLine("Please input a valid response number!");

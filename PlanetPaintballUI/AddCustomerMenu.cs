@@ -131,10 +131,13 @@ namespace PPUI
                     _newCustomer.Email = email;
                     try
                     {
+                        Log.Information("Adding customer \n" + _newCustomer);
                         _planetPaintballBL.AddCustomer(_newCustomer);
+                        Log.Information("Successful at adding customer!");
                     }
                     catch (System.Exception exc)
                     {
+                        Log.Warning("Failed to add customer.");
                         Console.WriteLine(exc.Message);
                         Console.WriteLine("Please press any key to continue");
                         Console.ReadLine();

@@ -1,0 +1,5 @@
+2022-01-26 17:10:27.275 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-01-26 17:10:33.222 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-01-26 17:10:44.184 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-01-26 17:10:52.268 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-26 17:10:53.650 -05:00 [INF] Exiting application.

@@ -29,26 +29,51 @@ namespace PPBL
                     return _repo.AddCustomer(p_customer);
                 }
 
-               
-
             }
 
-            public Customer SearchCustomer(Customer p_customer)
+            public List<Customer> SearchCustomer(string searchMode, string p_string)
             {
-
-                //validation process
                 List<Customer> listOfCustomers = _repo.GetAllCustomers();
-                var found = listOfCustomers.Find(p => p.Email == p_customer.Email);
-                if(found != null)
+                
+                //search by name (mode will = name) 
+                if(searchMode == "name")
                 {
-                    Console.WriteLine("Yes. This Email is in our customers list.");
-                    return _repo.SearchCustomer(p_customer);
+
+                    var found = listOfCustomers.Where(p => p.Name.Contains(p_string));
+                    if(found != null)
+                    {
+                        //validation process using LINQ Library
+                        return listOfCustomers
+                                .Where(customer => customer.Name.Contains(p_string))
+                                .ToList();
+                    }
+                    else
+                    {
+                        throw new Exception("A customer with this name has not been found.");
+                    }
 
                 }
-                else
+                
+                //search by email (mode will = email)
+                else if(searchMode == "email")
                 {
-                    throw new Exception("A customer with this email has not been found.");
+
+                    var found = listOfCustomers.Find(p => p.Email == p_string);
+                    if(found != null)
+                    {
+                        //validation process using LINQ Library
+                        return listOfCustomers
+                                .Where(customer => customer.Email.Equals(p_string))
+                                .ToList();
+                    }
+                    else
+                    {
+                        throw new Exception("A customer with this email has not been found.");
+                    }                    
+
                 }
+
+                return null;
                 
             }
 

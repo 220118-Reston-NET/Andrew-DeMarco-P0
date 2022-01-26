@@ -31,6 +31,12 @@ namespace PPModel
             
         }
 
+        //string version of the object
+        public override string ToString()
+        {
+            return $"=====================\nName: {Name}\nAddress: {Address}\nEmail: {Email}\n=====================\n";
+        }
+
     }
 
 }

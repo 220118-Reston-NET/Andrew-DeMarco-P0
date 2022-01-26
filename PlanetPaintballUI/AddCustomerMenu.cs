@@ -129,9 +129,19 @@ namespace PPUI
                     _newCustomer.Name = fullName;
                     _newCustomer.Address = address;
                     _newCustomer.Email = email;
-                     _planetPaintballBL.AddCustomer(_newCustomer);
+                    try
+                    {
+                        _planetPaintballBL.AddCustomer(_newCustomer);
+                    }
+                    catch (System.Exception exc)
+                    {
+                        Console.WriteLine(exc.Message);
+                        Console.WriteLine("Please press any key to continue");
+                        Console.ReadLine();
+                    }
 
-                    return "MainMenu";
+                    return "AddCustomer";
+                        
                 case "N":
                     return "MainMenu";
                 default:

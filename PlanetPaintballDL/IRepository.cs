@@ -25,6 +25,13 @@ namespace PPDL
         /// <returns></returns>
         Customer SearchCustomer(Customer p_customer);
         
+
+        /// <summary>
+        /// will give all the customers in the database
+        /// </summary>
+        /// <returns>returns a list collection of customer objects</returns>
+        List<Customer> GetAllCustomers();
+
     }
 
 

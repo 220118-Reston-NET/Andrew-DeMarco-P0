@@ -17,27 +17,30 @@ namespace PPDL
 
             string path = _filepath + "PlanetPaintballCustomer.json";
             
-            _jsonString = JsonSerializer.Serialize(p_customer, new JsonSerializerOptions {WriteIndented = true});
+                List<Customer> listOfCustomers = GetAllCustomers();
+                listOfCustomers.Add(p_customer);
+            
+                _jsonString = JsonSerializer.Serialize(listOfCustomers, new JsonSerializerOptions {WriteIndented = true});
 
-            File.WriteAllText(path, _jsonString);
-
+                File.WriteAllText(path, _jsonString);
+            
             return p_customer;
+
+        }
+
+        public List<Customer> GetAllCustomers()
+        {
+
+            _jsonString = File.ReadAllText(_filepath + "PlanetPaintballCustomer.json");
+
+            return JsonSerializer.Deserialize<List<Customer>>(_jsonString);
 
         }
 
         public Customer SearchCustomer(Customer p_customer)
         {
 
-            string path = _filepath + "PlanetPaintballCustomer.json";
-
-            _jsonString = File.ReadAllText(path);
-
-            List<Customer> customers = JsonSerializer.Deserialize<List<Customer>>(_jsonString);
-
-            Console.WriteLine("Name " + customers[0].Name);
-            Console.WriteLine("Address " + customers[0].Address);
-            Console.WriteLine("Email: " + customers[0].Email);
-
+            List<Customer> listOfCustomers = GetAllCustomers();
             return p_customer;
 
         }

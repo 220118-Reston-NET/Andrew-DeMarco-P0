@@ -32,11 +32,22 @@ namespace PPUI
             switch (userInput)
             {
                 case "Y":
-                    //add functionality so that user has to enter of type Name, address and email
                     Console.WriteLine("Please enter the email of the customer you want to search for:");
-                    string customerEmailInput = Console.ReadLine();
-                    _planetPaintballBL.SearchCustomer(_newCustomer);
-                    return "MainMenu";
+                    _newCustomer.Email = Console.ReadLine();
+                    try
+                    {
+                        _planetPaintballBL.SearchCustomer(_newCustomer);
+                        Console.WriteLine("Press any key to continue:");
+                        Console.ReadLine();
+                    }
+                    catch (System.Exception exc)
+                    {
+                        Console.WriteLine(exc.Message);
+                        Console.WriteLine("Please press any key to continue:");
+                        Console.ReadLine();
+                    }
+                    
+                    return "SearchCustomer";
                 case "N":
                     return "MainMenu";
                 default:

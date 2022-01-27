@@ -32,6 +32,12 @@ namespace PPDL
         /// <returns>returns a list collection of customer objects</returns>
         List<Customer> GetAllCustomers();
 
+        /// <summary>
+        /// will give all the stores in the database
+        /// </summary>
+        /// <returns>collection of store objects</returns>
+        List<StoreFront> GetStoreFronts();
+
     }
 
 

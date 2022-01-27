@@ -37,7 +37,8 @@ while (repeat)
             menu = new SearchCustomerMenu(new PlanetPaintballBL(new Repository()));
             break;
         case "ViewInventory":
-            //menu = new ViewInventoryMenu();
+            Log.Information("Displaying the ViewInventoryMenu to user.");
+            menu = new ViewInventoryMenu(new PlanetPaintballStoresBL(new Repository()));
             break;
         case "PlaceOrder":
             //menu = new PlaceOrderMenu();

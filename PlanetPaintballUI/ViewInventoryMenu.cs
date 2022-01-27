@@ -1,3 +1,4 @@
+using PPBL;
 using PPModel;
 
 namespace PPUI
@@ -5,6 +6,15 @@ namespace PPUI
 
     public class ViewInventoryMenu : IMenu
     {
+
+        private static StoreFront _newStore = new StoreFront();
+
+        //dependency injection
+        private IPlanetPaintballStoresBL _planetPaintballStoresBL;
+        public ViewInventoryMenu(IPlanetPaintballStoresBL p_planetPaintballStoresBL)
+        {
+            _planetPaintballStoresBL = p_planetPaintballStoresBL;
+        }
 
         public void Display()
         {
@@ -24,6 +34,25 @@ namespace PPUI
             {
 
                 case "Y":
+                    Console.WriteLine("Enter the Store location You wish to buy from:");
+                    string storeLocation = Console.ReadLine();
+                    try
+                    {
+                        List<StoreFront> listOfStoreProducts = _planetPaintballStoresBL.ViewInventory(storeLocation);
+                        Console.WriteLine("Here is the list of products that store has:");
+                        foreach (var item in listOfStoreProducts)
+                        {
+                            Console.WriteLine(item);
+                        }
+                        Console.WriteLine("Press any key to continue:");
+                        Console.ReadLine();
+                    }  
+                    catch(System.Exception exc)
+                    {
+                        Console.WriteLine(exc.Message);
+                        Console.WriteLine("Please press any key to continue:");
+                        Console.ReadLine();
+                    }
                     return "ViewInventory";
                 
 

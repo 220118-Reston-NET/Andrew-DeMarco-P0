@@ -45,6 +45,16 @@ namespace PPDL
 
         }
 
+
+        public List<StoreFront> GetStoreFronts()
+        {
+
+            _jsonString = File.ReadAllText(_filepath + "PlanetPaintballInventory.json");
+
+            return JsonSerializer.Deserialize<List<StoreFront>>(_jsonString);
+
+        }
+
     }
 
 }

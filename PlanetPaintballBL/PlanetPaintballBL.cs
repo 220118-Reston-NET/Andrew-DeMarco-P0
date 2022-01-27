@@ -39,7 +39,7 @@ namespace PPBL
                 if(searchMode == "name")
                 {
 
-                    var found = listOfCustomers.Where(p => p.Name.Contains(p_string));
+                    var found = listOfCustomers.Find(p => p.Name.Contains(p_string));
                     if(found != null)
                     {
                         //validation process using LINQ Library
@@ -73,7 +73,14 @@ namespace PPBL
 
                 }
 
-                return null;
+                //If trying to add new search ways and this error ever happens, 
+                //make sure that you typed the searchMode string correctly in the SearchCustomerMenu.
+                //Otherwise if strings in this searchMode match the string passed by the menu, then this
+                //exception should never run unless user's pc is messed up. 
+                else
+                {
+                    throw new Exception("Could not search for customer! Some error has occurred. Try restarting program.");
+                }
                 
             }
 

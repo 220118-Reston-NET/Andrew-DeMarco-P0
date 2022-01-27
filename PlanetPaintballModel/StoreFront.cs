@@ -44,6 +44,12 @@ namespace PPModel
 
         }
 
+        //string version of the object
+        public override string ToString()
+        {
+            return $"=====================\n{Products}\n=====================\n";
+        }
+
     }
 
 }

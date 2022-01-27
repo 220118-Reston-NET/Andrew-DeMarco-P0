@@ -40,3 +40,96 @@
 2022-01-27 12:56:43.499 -05:00 [INF] Displaying the ViewInventoryMenu to user.
 2022-01-27 12:56:44.701 -05:00 [INF] Displaying the MainMenu to user.
 2022-01-27 12:56:45.774 -05:00 [INF] Exiting application.
+2022-01-27 12:56:49.302 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 13:59:01.213 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 13:59:02.346 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 13:59:03.172 -05:00 [INF] Exiting application.
+2022-01-27 13:59:39.686 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 13:59:50.030 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 13:59:59.850 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 14:00:20.906 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 14:00:22.121 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 14:00:23.069 -05:00 [INF] Exiting application.
+2022-01-27 14:00:38.869 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 14:00:46.461 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 14:00:47.721 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 14:00:48.912 -05:00 [INF] Exiting application.
+2022-01-27 14:52:25.239 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:06:24.722 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:06:25.810 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:06:26.613 -05:00 [INF] Exiting application.
+2022-01-27 15:06:30.551 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:07:32.651 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:07:36.946 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:07:38.694 -05:00 [INF] Exiting application.
+2022-01-27 15:07:45.142 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:08:19.406 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:08:20.634 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:08:22.004 -05:00 [INF] Exiting application.
+2022-01-27 15:08:25.749 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:10:00.786 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:10:01.809 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:10:03.062 -05:00 [INF] Exiting application.
+2022-01-27 15:10:12.295 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:10:52.597 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:10:53.345 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:10:54.933 -05:00 [INF] Exiting application.
+2022-01-27 15:10:58.695 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:15:27.808 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:15:29.263 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:15:30.182 -05:00 [INF] Exiting application.
+2022-01-27 15:15:34.381 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:16:31.994 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:16:32.738 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:16:33.650 -05:00 [INF] Exiting application.
+2022-01-27 15:16:37.232 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:18:00.575 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:18:01.713 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:18:02.199 -05:00 [INF] Exiting application.
+2022-01-27 15:18:05.926 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:18:33.568 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:18:34.214 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:18:35.601 -05:00 [INF] Exiting application.
+2022-01-27 15:18:38.504 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:19:43.595 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:19:49.618 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:19:49.955 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:19:50.814 -05:00 [INF] Exiting application.
+2022-01-27 15:20:37.448 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:22:31.175 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:22:40.852 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:37:08.086 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:37:09.164 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:37:10.181 -05:00 [INF] Exiting application.
+2022-01-27 15:37:16.881 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:40:54.745 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:40:55.873 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:40:56.838 -05:00 [INF] Exiting application.
+2022-01-27 15:41:01.109 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:41:26.300 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:41:41.083 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:41:51.047 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 15:41:51.543 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 15:41:52.728 -05:00 [INF] Exiting application.
+2022-01-27 15:41:57.036 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:01:58.965 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:01:59.996 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 16:02:00.632 -05:00 [INF] Exiting application.
+2022-01-27 16:02:06.100 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:03:03.797 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:03:05.219 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 16:03:06.508 -05:00 [INF] Exiting application.
+2022-01-27 16:03:10.075 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:03:49.389 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:04:07.457 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:04:08.448 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 16:04:09.845 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 16:04:10.969 -05:00 [INF] Exiting application.
+2022-01-27 16:04:16.064 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:04:53.258 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:04:54.231 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 16:04:54.889 -05:00 [INF] Exiting application.
+2022-01-27 16:04:58.482 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:05:20.759 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-27 16:05:21.870 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-27 16:05:23.438 -05:00 [INF] Exiting application.

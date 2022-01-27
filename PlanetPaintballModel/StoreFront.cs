@@ -46,8 +46,15 @@ namespace PPModel
 
         //string version of the object
         public override string ToString()
-        {
-            return $"=====================\n{Products}\n=====================\n";
+        {   
+            string items = "=================\n";
+            foreach(Products item in _products)
+            {  
+                items +=  item + "\n=================\n";
+            }
+
+            return items;
+                
         }
 
     }

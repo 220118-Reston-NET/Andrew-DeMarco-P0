@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetPaintballBL", "Planet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetPaintballDL", "PlanetPaintballDL\PlanetPaintballDL.csproj", "{9001702E-1922-4BDB-AAD5-F4F638D2AFF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetPaintballTest", "PlanetPaintballTest\PlanetPaintballTest.csproj", "{C0F66BCC-41AE-49FA-84AC-0E8F5D0E0BCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{9001702E-1922-4BDB-AAD5-F4F638D2AFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9001702E-1922-4BDB-AAD5-F4F638D2AFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9001702E-1922-4BDB-AAD5-F4F638D2AFF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F66BCC-41AE-49FA-84AC-0E8F5D0E0BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F66BCC-41AE-49FA-84AC-0E8F5D0E0BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F66BCC-41AE-49FA-84AC-0E8F5D0E0BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F66BCC-41AE-49FA-84AC-0E8F5D0E0BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

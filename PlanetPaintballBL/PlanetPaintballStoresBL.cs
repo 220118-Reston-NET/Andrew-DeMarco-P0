@@ -23,7 +23,7 @@ namespace PPBL
             {
                 //validation process using LINQ Library
                 return listOfStores
-                    .Where( store => store.Address.Equals(p_address))
+                    .Where(store => store.Address.Equals(p_address))
                     .ToList();
             }
             else

@@ -133,3 +133,131 @@
 2022-01-27 16:05:20.759 -05:00 [INF] Displaying the ViewInventoryMenu to user.
 2022-01-27 16:05:21.870 -05:00 [INF] Displaying the MainMenu to user.
 2022-01-27 16:05:23.438 -05:00 [INF] Exiting application.
+2022-01-28 22:46:57.489 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-01-28 22:47:15.498 -05:00 [INF] Adding customer 
+=====================
+Name: chris woot
+Address: 43 smurf st
+Email: zzwoot@email.com
+=====================
+
+2022-01-28 22:47:15.535 -05:00 [INF] Successful at adding customer!
+2022-01-28 22:47:15.535 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-01-28 22:47:37.347 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-28 22:47:39.170 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-01-28 22:47:59.607 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-01-28 22:48:05.183 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-28 22:48:06.808 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-28 22:48:18.242 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-28 22:48:19.780 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-28 22:48:20.837 -05:00 [INF] Exiting application.
+2022-01-31 14:58:50.440 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-01-31 14:59:04.751 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-01-31 14:59:05.845 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-31 14:59:07.593 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-31 14:59:33.421 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-01-31 14:59:34.331 -05:00 [INF] Displaying the MainMenu to user.
+2022-01-31 14:59:41.131 -05:00 [INF] Exiting application.
+2022-02-02 11:33:09.598 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 11:33:49.113 -05:00 [INF] Adding customer 
+=====================
+Name: Andrew DeMarco
+Address: 72 Street Ave
+Email: andrew@email.com
+=====================
+
+2022-02-02 11:33:49.949 -05:00 [WRN] Failed to add customer.
+2022-02-02 11:33:59.536 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 11:48:33.937 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 11:48:35.240 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 11:48:52.157 -05:00 [INF] Adding customer 
+=====================
+Name: Andrew DeMarco
+Address: 123 Street
+Email: andrewd@email.com
+=====================
+
+2022-02-02 11:48:52.436 -05:00 [WRN] Failed to add customer.
+2022-02-02 11:50:45.663 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 11:50:46.484 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 11:50:47.671 -05:00 [INF] Exiting application.
+2022-02-02 11:50:51.550 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 11:51:13.557 -05:00 [INF] Adding customer 
+=====================
+Name: Andrew DeMarco
+Address: 45 Street Ave
+Email: andrew@email.com
+=====================
+
+2022-02-02 11:51:13.935 -05:00 [WRN] Failed to add customer.
+2022-02-02 11:53:49.271 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 11:53:49.990 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 11:53:51.111 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 11:54:25.583 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 11:54:35.273 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 11:54:38.807 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 11:54:50.892 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 11:55:10.590 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 11:55:11.706 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 11:55:13.737 -05:00 [INF] Exiting application.
+2022-02-02 12:00:56.565 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 12:01:19.988 -05:00 [INF] Adding customer 
+=====================
+Name: Andrew DeMarco
+Address: 321 Street St
+Email: andrew@email.com
+=====================
+
+2022-02-02 12:01:20.430 -05:00 [WRN] Failed to add customer.
+2022-02-02 12:21:32.015 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 12:21:33.237 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 12:21:34.499 -05:00 [INF] Exiting application.
+2022-02-02 12:31:35.482 -05:00 [INF] Exiting application.
+2022-02-02 12:31:58.251 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-02 12:32:07.078 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-02 12:32:08.196 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 12:32:09.966 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 12:32:21.023 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 12:32:28.176 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 12:32:29.325 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 12:32:30.020 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 12:32:43.733 -05:00 [INF] Adding customer 
+=====================
+Name: Andrew DeMarco
+Address: 321 Street Ave
+Email: andrew@email.com
+=====================
+
+2022-02-02 12:32:43.792 -05:00 [WRN] Failed to add customer.
+2022-02-02 12:37:42.313 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 12:37:43.373 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 12:37:44.503 -05:00 [INF] Exiting application.
+2022-02-02 12:37:48.528 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 12:38:01.748 -05:00 [INF] Adding customer 
+=====================
+Name: Andrew DeMarco
+Address: 321 Street Ave
+Email: andrew@email.com
+=====================
+
+2022-02-02 12:38:02.171 -05:00 [INF] Successful at adding customer!
+2022-02-02 12:38:02.171 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-02 12:38:04.498 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 12:38:05.519 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 12:38:11.839 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 12:38:13.052 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 12:38:16.344 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 12:38:21.707 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 12:38:22.819 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 12:38:23.812 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-02 12:38:37.835 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-02 12:38:39.389 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 12:38:42.149 -05:00 [INF] Exiting application.
+2022-02-02 12:39:24.873 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-02 12:39:31.690 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-02 12:39:34.714 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-02 12:39:35.528 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 12:39:36.769 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 12:39:43.837 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-02 12:39:44.571 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-02 12:39:45.642 -05:00 [INF] Exiting application.

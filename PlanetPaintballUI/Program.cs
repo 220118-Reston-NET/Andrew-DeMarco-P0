@@ -1,4 +1,5 @@
 ﻿global using Serilog;
+using Microsoft.Extensions.Configuration;
 using PPBL;
 using PPDL;
 using PPUI;
@@ -10,6 +11,15 @@ using PPUI;
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File("./logs/user.txt") 
     .CreateLogger();
+
+//reading and obtaining connectionString from appsettings.json
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json")
+    .Build();
+
+string _connectionString = configuration.GetConnectionString("Reference2DB");
+
 
 bool repeat = true;
 
@@ -30,24 +40,24 @@ while (repeat)
             break;
         case "AddCustomer":
             Log.Information("Displaying the AddCustomerMenu to user.");
-            menu = new AddCustomerMenu(new PlanetPaintballBL(new Repository()));
+            menu = new AddCustomerMenu(new PlanetPaintballBL(new SQLRepository(_connectionString)));
             break;
         case "SearchCustomer":
             Log.Information("Displaying the SearchCustomerMenu to user.");
-            menu = new SearchCustomerMenu(new PlanetPaintballBL(new Repository()));
+            menu = new SearchCustomerMenu(new PlanetPaintballBL(new SQLRepository(_connectionString)));
             break;
         case "ViewInventory":
             Log.Information("Displaying the ViewInventoryMenu to user.");
-            menu = new ViewInventoryMenu(new PlanetPaintballStoresBL(new Repository()));
+            menu = new ViewInventoryMenu(new PlanetPaintballStoresBL(new SQLRepository(_connectionString)));
             break;
         case "PlaceOrder":
-            //menu = new PlaceOrderMenu();
+            menu = new PlaceOrderMenu(new SQLRepository(_connectionString));
             break;
         case "ViewOrderHistory":
-            //menu = new ViewOrderHistoryMenu();
+            //menu = new ViewOrderHistoryMenu(new SQLRepository(_connectionString));
             break;
         case "ReplenishInventory":
-            //menu = new ReplenishInventoryMenu();
+            //menu = new ReplenishInventoryMenu(new SQLRepository(_connectionString));
             break;
         case "Exit":
             Log.Information("Exiting application.");

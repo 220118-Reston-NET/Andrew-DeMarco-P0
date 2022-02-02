@@ -51,10 +51,10 @@ while (repeat)
             menu = new ViewInventoryMenu(new PlanetPaintballStoresBL(new SQLRepository(_connectionString)));
             break;
         case "PlaceOrder":
-            menu = new PlaceOrderMenu(new SQLRepository(_connectionString));
+            menu = new PlaceOrderMenu(new PlanetPaintballBL(new SQLRepository(_connectionString)), new PlanetPaintballStoresBL(new SQLRepository(_connectionString)));
             break;
         case "ViewOrderHistory":
-            //menu = new ViewOrderHistoryMenu(new SQLRepository(_connectionString));
+            menu = new ViewOrderHistoryMenu(new PlanetPaintballBL(new SQLRepository(_connectionString)), new PlanetPaintballStoresBL(new SQLRepository(_connectionString)));
             break;
         case "ReplenishInventory":
             //menu = new ReplenishInventoryMenu(new SQLRepository(_connectionString));

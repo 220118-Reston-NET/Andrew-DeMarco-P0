@@ -38,6 +38,8 @@ namespace PPDL
         /// <returns>collection of store objects</returns>
         List<StoreFront> GetStoreFronts();
 
+        
+
     }
 
 

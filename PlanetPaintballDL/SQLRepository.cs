@@ -113,7 +113,16 @@ namespace PPDL
 
         public Customer SearchCustomer(Customer p_customer)
         {
-            throw new NotImplementedException();
+            return p_customer;
+        }
+
+        List<Products> IRepository.GetProductsByStoreAddress(string p_address)
+        {
+            List<Products> listOfProducts = new List<Products>();
+
+            string sqlQuery = @"";
+
+            return listOfProducts;
         }
     }
 }

@@ -38,7 +38,12 @@ namespace PPDL
         /// <returns>collection of store objects</returns>
         List<StoreFront> GetStoreFronts();
 
-        
+        /// <summary>
+        /// will get all the products that the store has
+        /// </summary>
+        /// <param name="p_address"></param>
+        /// <returns>collection of products</returns>
+        List<Products> GetProductsByStoreAddress(string p_address);
 
     }
 

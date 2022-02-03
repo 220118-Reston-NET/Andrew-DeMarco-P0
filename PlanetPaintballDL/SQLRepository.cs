@@ -111,6 +111,39 @@ namespace PPDL
 
         }
 
+        public Orders MakeOrder(Orders p_order)
+        {
+            
+            //first get the quantity from the database and see if that you have that many items in stock to buy
+            string sqlQuery = @"select sfp.quantity from storeFront_product sfp
+                            where sfp.productID = @productID";
+
+            //make a temp quantity to store that value for later
+            int tempQuantity = 0;
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@productID", p_order.LineItems[0]);
+                
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    tempQuantity = reader.GetInt32(0);
+                }
+
+                // tempQuantity = tempQuantity - 
+                // Console.WriteLine(tempQuantity);
+            }
+
+
+            return p_order;
+
+        }
+
         public void ReplenishInventory(int p_productID, int p_quantity)
         {
             int tempQuantity = 0;
@@ -161,7 +194,7 @@ namespace PPDL
         {
             List<Products> listOfProducts = new List<Products>();
 
-            string sqlQuery = @"select p.productID, p.productName, p.productPrice, p.productDescription, p.productCategory from Product p
+            string sqlQuery = @"select p.productID, p.productName, p.productPrice, p.productDescription, p.productCategory, sp.quantity from Product p
                             inner join storeFront_product sp on sp.productID = p.productID 
                             inner join StoreFront s on s.storeFrontID = sp.storeId
                             where s.storeFrontAddress = @storeFrontAddress";
@@ -185,7 +218,8 @@ namespace PPDL
                         Name = reader.GetString(1),
                         Price = reader.GetDecimal(2),
                         Description = reader.GetString(3),
-                        Category = reader.GetString(4)
+                        Category = reader.GetString(4),
+                        quantity = reader.GetInt32(5)
                     });
 
                 }

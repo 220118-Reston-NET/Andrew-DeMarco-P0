@@ -27,6 +27,12 @@ namespace PPBL
         /// <param name="p_productID"></param>
         /// <param name="p_quantity"></param>
         void ReplenishInventory(int p_productID, int p_quantity);
+
+        /// <summary>
+        /// will make the order of the items the customer has ordered
+        /// </summary>
+        /// <param name="newOrder"></param>
+        public Orders MakeOrder(Orders p_order);
     }
 
 }

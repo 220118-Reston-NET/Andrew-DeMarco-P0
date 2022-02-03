@@ -45,7 +45,13 @@ namespace PPDL
         /// <returns>collection of products</returns>
         List<Products> GetProductsByStoreAddress(string p_address);
 
+        Orders MakeOrder(Orders p_order);
 
+        /// <summary>
+        /// will replenish the inventory for a product.
+        /// </summary>
+        /// <param name="p_productID"></param>
+        /// <param name="p_quantity"></param>
         void ReplenishInventory(int p_productID, int p_quantity);
     }
 

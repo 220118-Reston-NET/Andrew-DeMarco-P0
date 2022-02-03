@@ -7,3 +7,66 @@
 2022-02-03 15:28:39.403 -05:00 [INF] Exiting application.
 2022-02-03 15:29:08.992 -05:00 [INF] Displaying the MainMenu to user.
 2022-02-03 15:29:10.278 -05:00 [INF] Exiting application.
+2022-02-03 15:37:18.607 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-03 15:37:53.570 -05:00 [INF] Adding customer 
+=====================
+Name: andrew johnson
+Address: 496 andrew st
+Email: andrew@email.com
+=====================
+
+2022-02-03 15:37:53.913 -05:00 [WRN] Failed to add customer.
+2022-02-03 15:37:55.575 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-03 15:38:11.873 -05:00 [INF] Adding customer 
+=====================
+Name: andrew johnson
+Address: 423 andrew st
+Email: andrewjohnson@email.com
+=====================
+
+2022-02-03 15:38:11.963 -05:00 [INF] Successful at adding customer!
+2022-02-03 15:38:11.963 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-03 15:38:13.406 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 15:38:14.213 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-03 15:38:21.252 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-03 15:38:34.436 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-03 15:38:41.458 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-03 15:38:50.358 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-03 15:38:51.385 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 15:38:52.794 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-03 15:39:19.190 -05:00 [INF] Adding customer 
+=====================
+Name: Bob Tyler
+Address: 123 that street
+Email: bobtyler@email.com
+=====================
+
+2022-02-03 15:39:19.258 -05:00 [INF] Successful at adding customer!
+2022-02-03 15:39:19.258 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-03 15:39:20.667 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 15:39:21.555 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-03 15:39:27.509 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-03 15:39:28.475 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 15:39:30.990 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-03 15:54:33.653 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-03 15:54:35.770 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 15:59:53.546 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 15:59:55.005 -05:00 [INF] Exiting application.
+2022-02-03 16:00:01.629 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-03 16:00:56.845 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-03 16:00:57.717 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 16:00:58.622 -05:00 [INF] Exiting application.
+2022-02-03 16:01:02.422 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-03 16:01:58.803 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-03 16:01:59.873 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 16:02:00.871 -05:00 [INF] Exiting application.
+2022-02-03 16:02:04.687 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-03 16:02:17.390 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-03 16:02:18.649 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 16:02:53.161 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 16:18:14.659 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 16:18:19.870 -05:00 [INF] Exiting application.
+2022-02-03 16:19:38.134 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 16:19:39.087 -05:00 [INF] Exiting application.
+2022-02-03 16:58:41.509 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-03 16:58:43.101 -05:00 [INF] Exiting application.

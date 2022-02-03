@@ -9,9 +9,11 @@ namespace PPModel
         public string Description { get; set; }
         public string Category { get; set; }
 
+        public int quantity { get; set; }
+
         public override string ToString()
         {   
-            return $"======================\nID: {ID}\nName: {Name}\nPrice: ${Price.ToString("0.00")}\nDescription: {Description}\nCategory: {Category}";    
+            return $"======================\nID: {ID}\nName: {Name}\nPrice: ${Price.ToString("0.00")}\nDescription: {Description}\nCategory: {Category}\nQuantity: {quantity}";    
         }
 
     }

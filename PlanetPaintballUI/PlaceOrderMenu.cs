@@ -8,8 +8,8 @@ namespace PPUI
     {
 
         private static Customer _newCustomer = new Customer();
+        private static Orders _newOrder = new Orders();
         private static StoreFront _newStore = new StoreFront();
-        
         private static LineItems _newLineItem = new LineItems();
 
         //Dependency injection
@@ -43,7 +43,7 @@ namespace PPUI
                     try
                     {
                         List<Customer> listOfCustomers = _planetPaintballBL.SearchCustomer("email", customerEmail);
-                        //listOfCustomers[1] = the customer's name
+                        //listOfCustomers[0] = the customer's name
                         Console.WriteLine("Shopping as: " + listOfCustomers[0].Name);
                     }
                     catch (System.Exception exc)
@@ -91,11 +91,14 @@ namespace PPUI
                         if(orderMode == "1")
                         {
                             Console.WriteLine("Please enter in the ID number for the item you want to add to your cart:");
-                            string itemIDNum = Console.ReadLine();
+                            int itemIDNum = Convert.ToInt32(Console.ReadLine());
                             try
                             {
                                 Console.WriteLine("How many would you like to buy?");
-                                string quantityOrdered = Console.ReadLine();
+                                int quantityOrdered = Convert.ToInt32(Console.ReadLine());
+                                _newLineItem.ProductID = itemIDNum;
+                                _newLineItem.ProductQuantity = quantityOrdered;
+                                itemsOrdered.Add(_newLineItem);
                                 Console.WriteLine("Adding your item!");
                             }
                             catch (System.Exception exc)
@@ -111,6 +114,10 @@ namespace PPUI
                             try
                             {
                                 Console.WriteLine("Here is your current order:");
+                                foreach(LineItems item in itemsOrdered)
+                                {
+                                    Console.WriteLine(item);
+                                }
                                 Console.WriteLine("Please press any key to continue:");
                                 Console.ReadLine(); 
                             }
@@ -125,6 +132,9 @@ namespace PPUI
                         {
                             userIsShopping = false;
                             Console.WriteLine("Checking out!");
+                            _newOrder.UserEmail = customerEmail;
+                            _newOrder.LineItems = itemsOrdered;
+                            _planetPaintballStoresBL.MakeOrder(_newOrder);
                             Console.WriteLine("Please press any key to continue:");
                             Console.ReadLine();
                         }

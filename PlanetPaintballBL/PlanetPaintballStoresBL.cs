@@ -43,6 +43,11 @@ namespace PPBL
         {
             _repo.ReplenishInventory(p_productID, p_quantity);
         }
+
+        public Orders MakeOrder(Orders p_order)
+        {
+            return _repo.MakeOrder(p_order);
+        }
     }
 
 }

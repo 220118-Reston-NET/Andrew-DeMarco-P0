@@ -45,6 +45,8 @@ namespace PPDL
         /// <returns>collection of products</returns>
         List<Products> GetProductsByStoreAddress(string p_address);
 
+
+        void ReplenishInventory(int p_productID, int p_quantity);
     }
 
 

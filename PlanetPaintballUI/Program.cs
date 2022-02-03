@@ -57,7 +57,7 @@ while (repeat)
             menu = new ViewOrderHistoryMenu(new PlanetPaintballBL(new SQLRepository(_connectionString)), new PlanetPaintballStoresBL(new SQLRepository(_connectionString)));
             break;
         case "ReplenishInventory":
-            //menu = new ReplenishInventoryMenu(new SQLRepository(_connectionString));
+            menu = new ReplenishInventoryMenu(new PlanetPaintballStoresBL(new SQLRepository(_connectionString)));
             break;
         case "Exit":
             Log.Information("Exiting application.");

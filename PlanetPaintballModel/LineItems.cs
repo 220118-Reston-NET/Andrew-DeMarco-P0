@@ -4,8 +4,8 @@ namespace PPModel
     public class LineItems
     {
 
-        public string ProductName { get; set; }
-        public string ProductQuantity { get; set; }
+        public int ID { get; set; }
+        public int ProductQuantity { get; set; }
 
     }
 

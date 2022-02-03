@@ -111,6 +111,47 @@ namespace PPDL
 
         }
 
+        public void ReplenishInventory(int p_productID, int p_quantity)
+        {
+            int tempQuantity = 0;
+            string sqlQuery = @"select sfp.quantity from storeFront_product sfp
+                            where sfp.productID = @productID";
+            
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@productID", p_productID);
+                
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    tempQuantity = reader.GetInt32(0);
+                }
+
+                tempQuantity = tempQuantity + p_quantity;
+                Console.WriteLine(tempQuantity);
+            }
+            
+            sqlQuery = @"update storeFront_product
+                        set quantity = @quantity
+                        where productID = @productID";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command= new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@quantity", tempQuantity);
+                command.Parameters.AddWithValue("@productID", p_productID);
+
+                command.ExecuteNonQuery();
+            }
+
+        }
+
         public Customer SearchCustomer(Customer p_customer)
         {
             return p_customer;
@@ -120,7 +161,36 @@ namespace PPDL
         {
             List<Products> listOfProducts = new List<Products>();
 
-            string sqlQuery = @"";
+            string sqlQuery = @"select p.productID, p.productName, p.productPrice, p.productDescription, p.productCategory from Product p
+                            inner join storeFront_product sp on sp.productID = p.productID 
+                            inner join StoreFront s on s.storeFrontID = sp.storeId
+                            where s.storeFrontAddress = @storeFrontAddress";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@storeFrontAddress", p_address);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    
+                    listOfProducts.Add(new Products()
+                    {
+                        ID = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        Price = reader.GetDecimal(2),
+                        Description = reader.GetString(3),
+                        Category = reader.GetString(4)
+                    });
+
+                }
+
+            }
 
             return listOfProducts;
         }

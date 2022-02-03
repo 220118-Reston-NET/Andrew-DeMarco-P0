@@ -10,6 +10,8 @@ namespace PPUI
         private static Customer _newCustomer = new Customer();
         private static StoreFront _newStore = new StoreFront();
         
+        private static LineItems _newLineItem = new LineItems();
+
         //Dependency injection
         private IPlanetPaintballBL _planetPaintballBL;
         private IPlanetPaintballStoresBL _planetPaintballStoresBL;
@@ -58,12 +60,12 @@ namespace PPUI
                     string storeLocation = Console.ReadLine();
                     try
                     {
-                        List<StoreFront> listOfStoreProducts = _planetPaintballStoresBL.ViewInventory(storeLocation);
+                        List<StoreFront> listOfStores = _planetPaintballStoresBL.ViewInventory(storeLocation);
                         Console.WriteLine("Here is the list of possible products you can order:");
-                        int index = 1;
+                        List<Products> listOfStoreProducts = _planetPaintballStoresBL.GetProductsByStoreAddress(storeLocation);
                         foreach(var item in listOfStoreProducts)
                         {
-                            Console.WriteLine(index + ": " + item);
+                            Console.WriteLine(item);
                         }
                     }
                     catch(System.Exception exc)
@@ -75,10 +77,11 @@ namespace PPUI
                         return "PlaceOrder";
                     }
 
+                    List<LineItems> itemsOrdered = new List<LineItems>();
                     bool userIsShopping = true; 
                     while (userIsShopping)
                     {
-
+                
                         Console.WriteLine("What do you want to do?");
                         Console.WriteLine("1: Add a product to my order.");
                         Console.WriteLine("2: View my current Order.");
@@ -87,11 +90,12 @@ namespace PPUI
 
                         if(orderMode == "1")
                         {
-                            Console.WriteLine("Please enter in the number for the item you want to add to your cart:");
-                            string item = Console.ReadLine();
-
+                            Console.WriteLine("Please enter in the ID number for the item you want to add to your cart:");
+                            string itemIDNum = Console.ReadLine();
                             try
                             {
+                                Console.WriteLine("How many would you like to buy?");
+                                string quantityOrdered = Console.ReadLine();
                                 Console.WriteLine("Adding your item!");
                             }
                             catch (System.Exception exc)

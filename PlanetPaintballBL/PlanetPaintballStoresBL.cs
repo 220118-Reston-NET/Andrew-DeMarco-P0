@@ -33,6 +33,16 @@ namespace PPBL
 
         }
 
+
+        public List<Products> GetProductsByStoreAddress(string p_address)
+        {
+            return _repo.GetProductsByStoreAddress(p_address);
+        }
+
+        public void ReplenishInventory(int p_productID, int p_quantity)
+        {
+            _repo.ReplenishInventory(p_productID, p_quantity);
+        }
     }
 
 }

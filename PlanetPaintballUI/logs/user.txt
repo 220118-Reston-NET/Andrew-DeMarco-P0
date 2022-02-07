@@ -70,3 +70,4 @@ Email: bobtyler@email.com
 2022-02-03 16:19:39.087 -05:00 [INF] Exiting application.
 2022-02-03 16:58:41.509 -05:00 [INF] Displaying the MainMenu to user.
 2022-02-03 16:58:43.101 -05:00 [INF] Exiting application.
+2022-02-07 15:47:01.344 -05:00 [INF] Exiting application.

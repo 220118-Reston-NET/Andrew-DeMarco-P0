@@ -3,9 +3,12 @@ namespace PPModel
 
     public class Orders
     {
+        public int OrderID;
 
-        public string UserEmail;
-        
+        public int CustomerID;
+    
+        public int StoreID;
+
         private List<LineItems> _lineItems;
         public List<LineItems> LineItems
         {

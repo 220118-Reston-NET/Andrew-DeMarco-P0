@@ -132,7 +132,10 @@ namespace PPUI
                         {
                             userIsShopping = false;
                             Console.WriteLine("Checking out!");
-                            _newOrder.UserEmail = customerEmail;
+                            List<Customer> listOfCustomers = _planetPaintballBL.SearchCustomer("email", customerEmail);
+                            List<StoreFront> listOfStores = _planetPaintballStoresBL.ViewInventory(storeLocation);
+                            _newOrder.CustomerID = listOfCustomers[0].ID;
+                            _newOrder.StoreID = listOfStores[0].ID;
                             _newOrder.LineItems = itemsOrdered;
                             _planetPaintballStoresBL.MakeOrder(_newOrder);
                             Console.WriteLine("Please press any key to continue:");

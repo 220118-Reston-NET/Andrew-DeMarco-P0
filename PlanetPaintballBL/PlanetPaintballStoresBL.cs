@@ -44,6 +44,16 @@ namespace PPBL
             _repo.ReplenishInventory(p_productID, p_quantity);
         }
 
+        public List<Products> ViewOrder(int p_productID, string p_address)
+        {
+            List<Products> listOfItemsInOrder = _repo.GetProductsByStoreAddress(p_address);
+            
+            return listOfItemsInOrder
+                    .Where(product => product.ID.Equals(p_productID))
+                    .ToList();
+
+        }
+
         public Orders MakeOrder(Orders p_order)
         {
             return _repo.MakeOrder(p_order);

@@ -41,7 +41,7 @@ namespace PPUI
                         List<StoreFront> listOfStores = _planetPaintballStoresBL.ViewInventory(storeLocation);
                         Console.WriteLine("Here is the list of products that store has:");
                         List<Products> listOfStoreProducts = _planetPaintballStoresBL.GetProductsByStoreAddress(storeLocation);
-                        foreach (var item in listOfStoreProducts)
+                        foreach (Products item in listOfStoreProducts)
                         {
                             Console.WriteLine(item);
                         }

@@ -29,6 +29,14 @@ namespace PPBL
         void ReplenishInventory(int p_productID, int p_quantity);
 
         /// <summary>
+        /// will view the product from an order
+        /// </summary>
+        /// <param name="p_order"></param>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        List<Products> ViewOrder(int p_productID, string storeAddress);
+
+        /// <summary>
         /// will make the order of the items the customer has ordered
         /// </summary>
         /// <param name="newOrder"></param>

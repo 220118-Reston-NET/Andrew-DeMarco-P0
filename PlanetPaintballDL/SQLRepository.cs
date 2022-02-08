@@ -113,13 +113,9 @@ namespace PPDL
 
         public Orders MakeOrder(Orders p_order)
         {
-            
-            //first get the quantity from the database and see if that you have that many items in stock to buy
-            string sqlQuery = @"select sfp.quantity from storeFront_product sfp
-                            where sfp.productID = @productID";
-
-            //make a temp quantity to store that value for later
-            int tempQuantity = 0;
+            //first make the order with the customerID and store id in the orders table
+            string sqlQuery = @"insert into Orders
+                                values(@customerID, @storeFrontID)";
 
             using(SqlConnection con = new SqlConnection(_connectionStrings))
             {
@@ -127,7 +123,26 @@ namespace PPDL
                 con.Open();
 
                 SqlCommand command = new SqlCommand(sqlQuery, con);
-                command.Parameters.AddWithValue("@productID", p_order.LineItems[0]);
+                command.Parameters.AddWithValue("@customerID", p_order.CustomerID);
+                command.Parameters.AddWithValue("@storeFrontID", p_order.StoreID);
+
+            }
+            
+            //next, get the quantity from the database and see if that you have that many items in stock to buy
+            sqlQuery = @"select sfp.quantity from storeFront_product sfp
+                            where sfp.productID = @productID";
+
+            //make a temp quantity to store that value for later
+            int tempQuantity = 0;
+            int index = 0;
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@productID", p_order.LineItems[index].ProductID);
                 
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -135,14 +150,44 @@ namespace PPDL
                     tempQuantity = reader.GetInt32(0);
                 }
 
-                // tempQuantity = tempQuantity - 
-                // Console.WriteLine(tempQuantity);
+                tempQuantity = tempQuantity - p_order.LineItems[index].ProductQuantity;
+                if(tempQuantity >= 0)
+                {
+                    //This will make the value of the quantity the same number with a negative in front of it.
+                    //That way we will take away the number from the total, allows us to reuse the code used to replenish, only instead we are taking away the value since it's now negative.
+                    int subtractFromTotalInventory = 0 - p_order.LineItems[index].ProductQuantity;
+                    ReplenishInventory(p_order.LineItems[index].ProductID, subtractFromTotalInventory);
+                }
+                else
+                {
+                    Exception exc = new Exception("Cannot purchase more items than the store has available!");
+                    return p_order;
+                }
+
             }
 
+            //now that we know the items can be purchased, we will now add them to the line items table and then get the total price.
+            sqlQuery = @"insert into LineItems
+                        values(@orderID, @productID, @quantity)";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@orderID", p_order.OrderID);
+                command.Parameters.AddWithValue("@productID", p_order.LineItems[index].ProductID);
+                command.Parameters.AddWithValue("@quantity", p_order.LineItems[index].ProductQuantity);
+
+            }
 
             return p_order;
 
         }
+
+
+        //make functionality to view all orders
 
         public void ReplenishInventory(int p_productID, int p_quantity)
         {
@@ -188,6 +233,11 @@ namespace PPDL
         public Customer SearchCustomer(Customer p_customer)
         {
             return p_customer;
+        }
+
+        public Products ViewOrder(Products p_product)
+        {
+            return p_product;
         }
 
         List<Products> IRepository.GetProductsByStoreAddress(string p_address)

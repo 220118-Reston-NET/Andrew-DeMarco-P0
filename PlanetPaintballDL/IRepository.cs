@@ -45,6 +45,18 @@ namespace PPDL
         /// <returns>collection of products</returns>
         List<Products> GetProductsByStoreAddress(string p_address);
 
+        /// <summary>
+        /// will view the current items in the order
+        /// </summary>
+        /// <param name="p_order"></param>
+        /// <returns></returns>
+        Products ViewOrder(Products p_product);
+
+        /// <summary>
+        /// will make the customer order with the products the customer adds
+        /// </summary>
+        /// <param name="p_order"></param>
+        /// <returns></returns>
         Orders MakeOrder(Orders p_order);
 
         /// <summary>

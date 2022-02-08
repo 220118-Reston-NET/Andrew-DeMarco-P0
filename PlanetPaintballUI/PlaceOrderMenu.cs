@@ -10,7 +10,7 @@ namespace PPUI
         private static Customer _newCustomer = new Customer();
         private static Orders _newOrder = new Orders();
         private static StoreFront _newStore = new StoreFront();
-        private static LineItems _newLineItem = new LineItems();
+        private LineItems _newLineItem = new LineItems();
 
         //Dependency injection
         private IPlanetPaintballBL _planetPaintballBL;
@@ -96,6 +96,7 @@ namespace PPUI
                             {
                                 Console.WriteLine("How many would you like to buy?");
                                 int quantityOrdered = Convert.ToInt32(Console.ReadLine());
+                                LineItems _newLineItem = new LineItems();
                                 _newLineItem.ProductID = itemIDNum;
                                 _newLineItem.ProductQuantity = quantityOrdered;
                                 itemsOrdered.Add(_newLineItem);
@@ -114,10 +115,24 @@ namespace PPUI
                             try
                             {
                                 Console.WriteLine("Here is your current order:");
-                                foreach(LineItems item in itemsOrdered)
+                                //declare some index value since view order takes in an index and does one product at a time
+                                int index = 0;
+                                
+                                foreach(var itemInOrder in itemsOrdered)
                                 {
-                                    Console.WriteLine(item);
+                                    List<Products> listOfItemsOrdered = _planetPaintballStoresBL.ViewOrder(itemInOrder.ProductID, storeLocation);
+                                        foreach(var items in listOfItemsOrdered)
+                                        {
+                                            int itemNum = index + 1;
+                                            Console.WriteLine("\nItem " + itemNum + ":");
+                                            Console.WriteLine("ID: " + items.ID);
+                                            Console.WriteLine("Name: " + items.Name);
+                                            Console.WriteLine("Amount in your cart: " + itemInOrder.ProductQuantity);
+                                            index ++;
+                                        }
                                 }
+
+
                                 Console.WriteLine("Please press any key to continue:");
                                 Console.ReadLine(); 
                             }

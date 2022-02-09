@@ -26,7 +26,7 @@ namespace PPBL
         /// </summary>
         /// <param name="p_productID"></param>
         /// <param name="p_quantity"></param>
-        void ReplenishInventory(int p_productID, int p_quantity);
+        void UpdateInventory(int p_productID, int p_quantity);
 
         /// <summary>
         /// will view the product from an order
@@ -37,10 +37,28 @@ namespace PPBL
         List<Products> ViewOrder(int p_productID, string storeAddress);
 
         /// <summary>
+        /// will add the customer order to the orders tab first.
+        /// </summary>
+        /// <param name="p_order"></param>
+        /// <returns></returns>
+        public Orders StartOrder(Orders p_order);
+
+        /// <summary>
         /// will make the order of the items the customer has ordered
         /// </summary>
         /// <param name="newOrder"></param>
-        public Orders MakeOrder(Orders p_order);
+        LineItems MakeOrder(LineItems p_lineItems, int orderID);
+
+        /// <summary>
+        /// will get the orders of either a store or customer based on their search mode
+        /// </summary>
+        /// <param name="searchMode"></param>
+        /// <param name="storeLocation"></param>
+        /// <returns></returns>
+        List<Orders> GetOrders(string searchMode, string seachedString);
+
+        
+
     }
 
 }

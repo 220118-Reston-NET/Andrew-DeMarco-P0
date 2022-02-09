@@ -47,7 +47,7 @@ namespace PPUI
                         int replenishID = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Enter the amount of items you are adding to the quantity:");
                         int replenishAmount = Convert.ToInt32(Console.ReadLine());
-                        _planetPaintballStoresBL.ReplenishInventory(replenishID, replenishAmount);
+                        _planetPaintballStoresBL.UpdateInventory(replenishID, replenishAmount);
                     }
                     catch(System.Exception exc)
                     {
@@ -55,6 +55,7 @@ namespace PPUI
                         Console.WriteLine("Please press any key to continue:");
                         Console.ReadLine();
                     }
+                    Console.WriteLine("Item has been replenished! Press any key to continue:");
                     Console.ReadLine();
                     return "ReplenishInventory";
                 case "N":

@@ -5,7 +5,6 @@ using PPDL;
 using PPUI;
 
 
-
 //creating and configuring our logger
 //logger will save to user.txt in logs folder
 Log.Logger = new LoggerConfiguration()
@@ -51,12 +50,15 @@ while (repeat)
             menu = new ViewInventoryMenu(new PlanetPaintballStoresBL(new SQLRepository(_connectionString)));
             break;
         case "PlaceOrder":
+            Log.Information("Displaying the PlaceOrderMenu to user.");
             menu = new PlaceOrderMenu(new PlanetPaintballBL(new SQLRepository(_connectionString)), new PlanetPaintballStoresBL(new SQLRepository(_connectionString)));
             break;
         case "ViewOrderHistory":
+            Log.Information("Displaying the ViewOrderHistoyMenu to user.");
             menu = new ViewOrderHistoryMenu(new PlanetPaintballBL(new SQLRepository(_connectionString)), new PlanetPaintballStoresBL(new SQLRepository(_connectionString)));
             break;
         case "ReplenishInventory":
+            Log.Information("Displaying the ReplenishInventoryMenu to user.");
             menu = new ReplenishInventoryMenu(new PlanetPaintballStoresBL(new SQLRepository(_connectionString)));
             break;
         case "Exit":

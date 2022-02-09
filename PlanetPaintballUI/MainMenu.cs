@@ -11,7 +11,7 @@ namespace PPUI
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("1: Add a customer.");
             Console.WriteLine("2: Search for a customer.");
-            Console.WriteLine("3: View Planet Paintball's inventory.");
+            Console.WriteLine("3: View a Store's inventory.");
             Console.WriteLine("4: Place an order.");
             Console.WriteLine("5: View order history.");
             Console.WriteLine("6: Replenish inventory.");

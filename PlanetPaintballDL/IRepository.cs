@@ -46,6 +46,12 @@ namespace PPDL
         List<Products> GetProductsByStoreAddress(string p_address);
 
         /// <summary>
+        /// will get all of the orders available
+        /// </summary>
+        /// <returns></returns>
+        List<Orders> GetAllOrders(); 
+
+        /// <summary>
         /// will view the current items in the order
         /// </summary>
         /// <param name="p_order"></param>
@@ -53,18 +59,25 @@ namespace PPDL
         Products ViewOrder(Products p_product);
 
         /// <summary>
-        /// will make the customer order with the products the customer adds
+        /// will start the order by adding information to the orders table in database
         /// </summary>
         /// <param name="p_order"></param>
         /// <returns></returns>
-        Orders MakeOrder(Orders p_order);
+        Orders StartOrder(Orders p_order);
+
+        /// <summary>
+        /// will make the add the products the customer ordered
+        /// </summary>
+        /// <param name="p_order"></param>
+        /// <returns></returns>
+        LineItems MakeOrder(LineItems p_lineItems, int quantityOrdered);
 
         /// <summary>
         /// will replenish the inventory for a product.
         /// </summary>
         /// <param name="p_productID"></param>
         /// <param name="p_quantity"></param>
-        void ReplenishInventory(int p_productID, int p_quantity);
+        void UpdateInventory(int p_productID, int p_quantity);
     }
 
 

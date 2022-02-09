@@ -4,7 +4,7 @@ using Xunit;
 namespace PlanetPaintballTest
 {
    
-    public class CustomerTest
+    public class StoreFrontTest
     {
         /// <summary>
         /// 
@@ -12,19 +12,19 @@ namespace PlanetPaintballTest
         /// [Fact] is a data annotation in C# 
         /// and will tell ther compiler that this method is a unit test
         [Fact]
-        public void CustomerShouldSetValidData()
+        public void StoreFrontShouldSetValidData()
         {
 
             //Arrange
-            Customer cust = new Customer();
-            string validName = "Bob";
+            StoreFront store = new StoreFront();
+            string validAddress = "21 Paint St";
 
             //Act
-            cust.Name = validName;
+            store.Address = validAddress;
 
             //Assert
-            Assert.NotNull(cust.Name);
-            Assert.Equal(validName, cust.Name);
+            Assert.NotNull(store.Address);
+            Assert.Equal(validAddress, store.Address);
 
         }
         

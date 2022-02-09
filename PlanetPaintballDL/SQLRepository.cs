@@ -111,9 +111,10 @@ namespace PPDL
 
         }
 
-        public Orders MakeOrder(Orders p_order)
+        public Orders StartOrder(Orders p_order)
         {
-            //first make the order with the customerID and store id in the orders table
+            
+            //insert the values into orders table
             string sqlQuery = @"insert into Orders
                                 values(@customerID, @storeFrontID)";
 
@@ -126,15 +127,13 @@ namespace PPDL
                 command.Parameters.AddWithValue("@customerID", p_order.CustomerID);
                 command.Parameters.AddWithValue("@storeFrontID", p_order.StoreID);
 
-            }
-            
-            //next, get the quantity from the database and see if that you have that many items in stock to buy
-            sqlQuery = @"select sfp.quantity from storeFront_product sfp
-                            where sfp.productID = @productID";
+                //execute the SQL statement
+                command.ExecuteNonQuery();
 
-            //make a temp quantity to store that value for later
-            int tempQuantity = 0;
-            int index = 0;
+            }
+
+            //now grab the latest order in the table
+            sqlQuery = @"select max(o.orderID) from Orders o";
 
             using(SqlConnection con = new SqlConnection(_connectionStrings))
             {
@@ -142,28 +141,56 @@ namespace PPDL
                 con.Open();
 
                 SqlCommand command = new SqlCommand(sqlQuery, con);
-                command.Parameters.AddWithValue("@productID", p_order.LineItems[index].ProductID);
-                
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    p_order.OrderID = reader.GetInt32(0);
+                }
+
+            }
+
+            return p_order;
+
+        }
+
+        public LineItems MakeOrder(LineItems p_lineItems, int p_orderID)
+        {         
+            //get the quantity from the database and see if that you have that many items in stock to buy
+            string sqlQuery = @"select sfp.quantity from storeFront_product sfp
+                            where sfp.productID = @productID";
+
+            //make a temp quantity to store that value for later
+            int tempQuantity = 0;
+            
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@productID", p_lineItems.ProductID);
+
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
                     tempQuantity = reader.GetInt32(0);
                 }
 
-                tempQuantity = tempQuantity - p_order.LineItems[index].ProductQuantity;
+                tempQuantity = tempQuantity - p_lineItems.ProductQuantity;
                 if(tempQuantity >= 0)
                 {
                     //This will make the value of the quantity the same number with a negative in front of it.
                     //That way we will take away the number from the total, allows us to reuse the code used to replenish, only instead we are taking away the value since it's now negative.
-                    int subtractFromTotalInventory = 0 - p_order.LineItems[index].ProductQuantity;
-                    ReplenishInventory(p_order.LineItems[index].ProductID, subtractFromTotalInventory);
+                    int subtractFromTotalInventory = 0 - p_lineItems.ProductQuantity;
+                    UpdateInventory(p_lineItems.ProductID, subtractFromTotalInventory);
                 }
                 else
                 {
                     Exception exc = new Exception("Cannot purchase more items than the store has available!");
-                    return p_order;
+                     return p_lineItems;
                 }
-
+               
             }
 
             //now that we know the items can be purchased, we will now add them to the line items table and then get the total price.
@@ -176,20 +203,25 @@ namespace PPDL
                 con.Open();
 
                 SqlCommand command = new SqlCommand(sqlQuery, con);
-                command.Parameters.AddWithValue("@orderID", p_order.OrderID);
-                command.Parameters.AddWithValue("@productID", p_order.LineItems[index].ProductID);
-                command.Parameters.AddWithValue("@quantity", p_order.LineItems[index].ProductQuantity);
+                command.Parameters.AddWithValue("@orderID", p_orderID);
+                command.Parameters.AddWithValue("@productID", p_lineItems.ProductID);
+                command.Parameters.AddWithValue("@quantity", p_lineItems.ProductQuantity);
+
+                //execute the SQL statement
+                command.ExecuteNonQuery();
 
             }
 
-            return p_order;
+            return p_lineItems;
 
         }
 
+        public Orders GetOrders(Orders p_order)
+        {
+            return p_order;
+        }
 
-        //make functionality to view all orders
-
-        public void ReplenishInventory(int p_productID, int p_quantity)
+        public void UpdateInventory(int p_productID, int p_quantity)
         {
             int tempQuantity = 0;
             string sqlQuery = @"select sfp.quantity from storeFront_product sfp
@@ -210,7 +242,7 @@ namespace PPDL
                 }
 
                 tempQuantity = tempQuantity + p_quantity;
-                Console.WriteLine(tempQuantity);
+            
             }
             
             sqlQuery = @"update storeFront_product
@@ -278,5 +310,43 @@ namespace PPDL
 
             return listOfProducts;
         }
+
+        public List<Orders> GetAllOrders()
+        {
+            List<Orders> listOfOrders = new List<Orders>();
+
+            string sqlQuery = @"select * from Orders";
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                //open the connection
+                con.Open();
+
+                //command object that has our query and con obj
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+
+                //read outputs from sql statement using special class
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    listOfOrders.Add(new Orders()
+                    {
+
+                        OrderID = reader.GetInt32(0),
+                        CustomerID = reader.GetInt32(1),
+                        StoreID = reader.GetInt32(2)
+
+                    });
+
+                }
+
+            }
+
+            return listOfOrders;
+        }
+
     }
 }

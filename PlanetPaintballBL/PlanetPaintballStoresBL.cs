@@ -39,9 +39,9 @@ namespace PPBL
             return _repo.GetProductsByStoreAddress(p_address);
         }
 
-        public void ReplenishInventory(int p_productID, int p_quantity)
+        public void UpdateInventory(int p_productID, int p_quantity)
         {
-            _repo.ReplenishInventory(p_productID, p_quantity);
+            _repo.UpdateInventory(p_productID, p_quantity);
         }
 
         public List<Products> ViewOrder(int p_productID, string p_address)
@@ -54,10 +54,72 @@ namespace PPBL
 
         }
 
-        public Orders MakeOrder(Orders p_order)
+        public LineItems MakeOrder(LineItems p_lineItems, int quantity)
         {
-            return _repo.MakeOrder(p_order);
+            return _repo.MakeOrder(p_lineItems, quantity);
         }
+
+        public List<Orders> GetOrders(string searchMode, string searchedString)
+        {
+
+            List<Customer> listOfCustomer = _repo.GetAllCustomers();
+            List<StoreFront> listOfStores = _repo.GetStoreFronts();
+            List<Orders> listOfOrders = _repo.GetAllOrders();
+
+            //search by the customer
+            if(searchMode == "email")
+            {
+                var found = listOfCustomer.Find(p => p.Email == searchedString);
+                    if(found != null)
+                    {
+                        //validation process using LINQ Library
+                        return listOfOrders
+                                .Where(customer => customer.CustomerID.Equals(found.ID))
+                                .ToList();
+                    }
+                    else
+                    {
+                        throw new Exception("A customer with this email has not been found.");
+                    }
+            }
+
+            //search by the store
+            else if(searchMode == "storeAddress")
+            {
+
+                var found = listOfStores.Find(p => p.Address == searchedString);
+                if(found != null)
+                {
+
+                    //validation process using LINQ Library
+                    return listOfOrders
+                        .Where(store => store.StoreID.Equals(found.ID))
+                        .ToList();
+
+                }
+                else
+                {
+                    throw new Exception("A store with this address has not been found.");
+                }
+
+            }
+            
+            //If trying to add new search ways and this error ever happens, 
+            //make sure that you typed the searchMode string correctly in the the ViewOrdersHistoryMenu.
+            //Otherwise if strings in this searchMode match the string passed by the menu, then this
+            //exception should never run unless user's pc is messed up. 
+            else
+            {
+                throw new Exception("Could not search! Some error has occurred. Try restarting program.");
+            }
+            
+        }
+
+        public Orders StartOrder(Orders p_order)
+        {
+            return _repo.StartOrder(p_order);
+        }
+
     }
 
 }

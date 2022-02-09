@@ -152,7 +152,11 @@ namespace PPUI
                             _newOrder.CustomerID = listOfCustomers[0].ID;
                             _newOrder.StoreID = listOfStores[0].ID;
                             _newOrder.LineItems = itemsOrdered;
-                            _planetPaintballStoresBL.MakeOrder(_newOrder);
+                            _planetPaintballStoresBL.StartOrder(_newOrder);
+                            foreach(var item in itemsOrdered)
+                            {
+                                _planetPaintballStoresBL.MakeOrder(item, _newOrder.OrderID);
+                            }
                             Console.WriteLine("Please press any key to continue:");
                             Console.ReadLine();
                         }

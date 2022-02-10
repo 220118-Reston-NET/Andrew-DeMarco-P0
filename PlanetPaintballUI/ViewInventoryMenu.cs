@@ -28,6 +28,11 @@ namespace PPUI
         public string UserChoice()
         {
 
+            //used to log user input to user.txt file
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.File("./logs/user.txt") 
+                .CreateLogger();
+
             string userInput = Console.ReadLine().ToUpper();
 
             switch(userInput)
@@ -36,6 +41,7 @@ namespace PPUI
                 case "Y":
                     Console.WriteLine("Enter the Store location You wish to buy from:");
                     string storeLocation = Console.ReadLine();
+                    Log.Information("User entered in a store location.");
                     try
                     {
                         List<StoreFront> listOfStores = _planetPaintballStoresBL.ViewInventory(storeLocation);
@@ -45,12 +51,14 @@ namespace PPUI
                         {
                             Console.WriteLine(item);
                         }
+                        Log.Information("Displayed list of items store has to user.");
                         Console.WriteLine("Press any key to continue:");
                         Console.ReadLine();
                     }  
                     catch(System.Exception exc)
                     {
                         Console.WriteLine(exc.Message);
+                        Log.Warning("No store found with that address.");
                         Console.WriteLine("Please press any key to continue:");
                         Console.ReadLine();
                     }
@@ -62,6 +70,7 @@ namespace PPUI
 
                 default:
                     Console.WriteLine("You entered an illegal character! Please try again.");
+                    Log.Warning("User entered in an illegal menu option.");
                     Console.WriteLine("Press any key to continue.");
                     Console.ReadLine();
                     return "ViewInventory";

@@ -40,6 +40,7 @@ namespace PPUI
                 case "Y":
                     Console.WriteLine("Enter your customer email:");
                     string customerEmail = Console.ReadLine();
+                    Log.Information("User entered in their email.");
                     try
                     {
                         List<Customer> listOfCustomers = _planetPaintballBL.SearchCustomer("email", customerEmail);
@@ -49,6 +50,7 @@ namespace PPUI
                     catch (System.Exception exc)
                     {
                         Console.WriteLine(exc.Message);
+                        Log.Warning("User entered in an email that does not exist.");
                         Console.WriteLine("Taking you back to the Place Order Menu.");
                         Console.WriteLine("Please press any key to continue:");
                         Console.ReadLine();
@@ -58,6 +60,7 @@ namespace PPUI
 
                     Console.WriteLine("Enter the Store location You wish to buy from:");
                     string storeLocation = Console.ReadLine();
+                    Log.Information("User entered in a store location.");
                     try
                     {
                         List<StoreFront> listOfStores = _planetPaintballStoresBL.ViewInventory(storeLocation);
@@ -67,10 +70,12 @@ namespace PPUI
                         {
                             Console.WriteLine(item);
                         }
+                        Log.Information("Displayed list of items the user can buy.");
                     }
                     catch(System.Exception exc)
                     {
                         Console.WriteLine(exc.Message);
+                        Log.Warning("Could not find store user was looking for.");
                         Console.WriteLine("Taking you back to the Place Order Menu.");
                         Console.WriteLine("Please press any key to continue:");
                         Console.ReadLine();
@@ -90,6 +95,7 @@ namespace PPUI
 
                         if(orderMode == "1")
                         {
+                            Log.Information("User is adding an item to their order.");
                             Console.WriteLine("Please enter in the ID number for the item you want to add to your cart:");
                             int itemIDNum = Convert.ToInt32(Console.ReadLine());
                             try
@@ -99,12 +105,15 @@ namespace PPUI
                                 LineItems _newLineItem = new LineItems();
                                 _newLineItem.ProductID = itemIDNum;
                                 _newLineItem.ProductQuantity = quantityOrdered;
+                                
                                 itemsOrdered.Add(_newLineItem);
+                                Log.Information("The item has been added.");
                                 Console.WriteLine("Adding your item!");
                             }
                             catch (System.Exception exc)
                             {
                                 Console.WriteLine(exc.Message);
+                                Log.Warning("The item the user added was not found.");
                                 Console.WriteLine("Please press any key to continue:");
                                 Console.ReadLine();
                             }
@@ -114,10 +123,12 @@ namespace PPUI
                         {
                             try
                             {
+                                Log.Information("User is viewing their current order.");
                                 Console.WriteLine("Here is your current order:");
                                 //declare some index value since view order takes in an index and does one product at a time
                                 int index = 0;
-                                
+                                //will be used to calculate the total cost of items in the user's cart
+                                decimal cartTotal = 0;
                                 foreach(var itemInOrder in itemsOrdered)
                                 {
                                     List<Products> listOfItemsOrdered = _planetPaintballStoresBL.ViewOrder(itemInOrder.ProductID, storeLocation);
@@ -127,11 +138,18 @@ namespace PPUI
                                             Console.WriteLine("\nItem " + itemNum + ":");
                                             Console.WriteLine("ID: " + items.ID);
                                             Console.WriteLine("Name: " + items.Name);
+                                            Console.WriteLine("Price: $" + items.Price.ToString("0.00"));
                                             Console.WriteLine("Amount in your cart: " + itemInOrder.ProductQuantity);
+                                            
+                                            //will calculate the total cost of the items based on how many were purchased
+                                            cartTotal = cartTotal + (items.Price * itemInOrder.ProductQuantity);
                                             index ++;
                                         }
                                 }
-
+                                
+                                //display the total cost for their current cart
+                                Console.WriteLine("\nCart Total: $" + cartTotal.ToString("0.00"));
+                                Log.Information("The current order has been displayed to the user.");
 
                                 Console.WriteLine("Please press any key to continue:");
                                 Console.ReadLine(); 
@@ -139,25 +157,69 @@ namespace PPUI
                             catch (System.Exception exc)
                             {
                                 Console.WriteLine(exc.Message);
+                                Log.Warning("User order was not able to be displayed.");
                                 Console.WriteLine("Please press any key to continue:");
                                 Console.ReadLine();
                             }            
                         }
                         else if (orderMode == "3")
                         {
+                            Log.Information("User is finalizing their order and checking out.");
                             userIsShopping = false;
                             Console.WriteLine("Checking out!");
+
+                            Console.WriteLine("Here was your completed order:");
+                            //declare some index value since view order takes in an index and does one product at a time
+                            int index = 0;
+                            //will be used to calculate the total cost of items in the user's cart
+                            decimal cartTotal = 0;
+
+                            //display what the user purchased as well as their cart total, then store that total in orders obj
+                            foreach(var itemInOrder in itemsOrdered)
+                            {
+                                List<Products> listOfItemsOrdered = _planetPaintballStoresBL.ViewOrder(itemInOrder.ProductID, storeLocation);
+                                    foreach(var items in listOfItemsOrdered)
+                                    {
+                                        int itemNum = index + 1;
+                                        Console.WriteLine("\nItem " + itemNum + ":");
+                                        Console.WriteLine("ID: " + items.ID);
+                                        Console.WriteLine("Name: " + items.Name);
+                                        Console.WriteLine("Price: $" + items.Price.ToString("0.00"));
+                                        Console.WriteLine("Amount in your cart: " + itemInOrder.ProductQuantity);
+                                        
+                                        //will calculate the total cost of the items based on how many were purchased
+                                        cartTotal = cartTotal + (items.Price * itemInOrder.ProductQuantity);
+                                        index ++;
+                                    }
+
+                                   
+                            }
+                    
+                            //display the total cost for their current cart
+                            Console.WriteLine("\nTotal Spent: $" + cartTotal.ToString("0.00"));
+                            Log.Information("Final order has been displayed to the user.");
+
                             List<Customer> listOfCustomers = _planetPaintballBL.SearchCustomer("email", customerEmail);
                             List<StoreFront> listOfStores = _planetPaintballStoresBL.ViewInventory(storeLocation);
                             _newOrder.CustomerID = listOfCustomers[0].ID;
                             _newOrder.StoreID = listOfStores[0].ID;
+                            _newOrder.orderTotalCost = cartTotal;
                             _newOrder.LineItems = itemsOrdered;
+                            
                             _planetPaintballStoresBL.StartOrder(_newOrder);
                             foreach(var item in itemsOrdered)
                             {
                                 _planetPaintballStoresBL.MakeOrder(item, _newOrder.OrderID);
                             }
+                            Log.Information("Order has been made.");
                             Console.WriteLine("Please press any key to continue:");
+                            Console.ReadLine();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Please input a valid menu option of 1,2 or 3.");
+                            Log.Information("User has entered in an illegal menu option.");
+                            Console.WriteLine("Press any key to continue:");
                             Console.ReadLine();
                         }
 
@@ -169,6 +231,7 @@ namespace PPUI
                     return "MainMenu";
                 default:
                     Console.WriteLine("Please input a valid response of Y or N.");
+                    Log.Information("User has entered in an illegal menu option.");
                     Console.WriteLine("Press any key to continue:");
                     Console.ReadLine();
                     return "PlaceOrder";

@@ -33,6 +33,11 @@ namespace PPUI
         public string UserChoice()
         {
 
+            //used to log user input to user.txt file
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.File("./logs/user.txt") 
+                .CreateLogger();
+
             string userInput = Console.ReadLine().ToUpper();
 
             switch(userInput)
@@ -42,13 +47,15 @@ namespace PPUI
                     Console.WriteLine("1: Search a customer order history.");
                     Console.WriteLine("2: Search a store front order history.");
                     string searchMode = Console.ReadLine();
+                    
 
                     if(searchMode == "1")
                     {
-
+                        Log.Information("User is searching by email.");
                         searchMode = "email";
                         Console.WriteLine("Enter the email you want to search for:");
                         string customerEmail = Console.ReadLine();
+                        Log.Information("User has entered in an email.");
                         try
                         {
                             List<Customer> listOfCustomers = _planetPaintballBL.SearchCustomer(searchMode, customerEmail);
@@ -59,13 +66,15 @@ namespace PPUI
                             {
                                 Console.WriteLine(item);
                             }
-
+                            
+                            Log.Information("The order history is being displayed to the user.");
                             Console.WriteLine("Press any key to continue:");
                             Console.ReadLine();
                         }
                         catch (System.Exception exc)
                         {
                             Console.WriteLine(exc.Message);
+                            Log.Warning("The order history was not able to be found. Information entered by user does not exist.");
                             Console.WriteLine("Please press any key to continue:");
                             Console.ReadLine();
                         }
@@ -73,6 +82,7 @@ namespace PPUI
                     }
                     else if(searchMode == "2")
                     {
+                        Log.Information("User is searching by store address.");
                         searchMode = "storeAddress";
                         Console.WriteLine("Enter the store location you want to search for:");
                         String storeLocation = Console.ReadLine();
@@ -87,12 +97,14 @@ namespace PPUI
                                 Console.WriteLine(item);
                             }
 
+                            Log.Information("Displaying order history to user.");
                             Console.WriteLine("Press any key to continue:");
                             Console.ReadLine();
                         }  
                         catch(System.Exception exc)
                         {
                             Console.WriteLine(exc.Message);
+                            Log.Warning("The order history was not able to be found. Information entered by user does not exist.");
                             Console.WriteLine("Please press any key to continue:");
                             Console.ReadLine();
                         }
@@ -101,6 +113,7 @@ namespace PPUI
                     else
                     {
                         Console.WriteLine("You did not enter a menu option!");
+                        Log.Warning("User entered an illegal menu option.");
                         Console.WriteLine("Press any key to continue:");
                         Console.ReadLine();
                     }
@@ -110,6 +123,7 @@ namespace PPUI
                     return "MainMenu";
                 default:
                     Console.WriteLine("Please input a valid response of Y or N.");
+                    Log.Warning("User entered an illegal menu option.");
                     Console.WriteLine("Press any key to continue:");
                     Console.ReadLine();
                     return "ViewOrderHistoryMenu";

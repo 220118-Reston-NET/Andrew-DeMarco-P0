@@ -116,7 +116,7 @@ namespace PPDL
             
             //insert the values into orders table
             string sqlQuery = @"insert into Orders
-                                values(@customerID, @storeFrontID)";
+                                values(@customerID, @storeFrontID, @totalSpent)";
 
             using(SqlConnection con = new SqlConnection(_connectionStrings))
             {
@@ -126,6 +126,7 @@ namespace PPDL
                 SqlCommand command = new SqlCommand(sqlQuery, con);
                 command.Parameters.AddWithValue("@customerID", p_order.CustomerID);
                 command.Parameters.AddWithValue("@storeFrontID", p_order.StoreID);
+                command.Parameters.AddWithValue("@totalSpent", p_order.orderTotalCost);
 
                 //execute the SQL statement
                 command.ExecuteNonQuery();
@@ -337,7 +338,8 @@ namespace PPDL
 
                         OrderID = reader.GetInt32(0),
                         CustomerID = reader.GetInt32(1),
-                        StoreID = reader.GetInt32(2)
+                        StoreID = reader.GetInt32(2),
+                        orderTotalCost = reader.GetDecimal(3)
 
                     });
 

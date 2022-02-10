@@ -9,6 +9,8 @@ namespace PPModel
     
         public int StoreID;
 
+        public decimal orderTotalCost;
+
         private List<LineItems> _lineItems;
         public List<LineItems> LineItems
         {
@@ -27,7 +29,7 @@ namespace PPModel
         //string version of the object
         public override string ToString()
         {
-            return $"=====================\nOrder ID: {OrderID}\nCustomer ID: {CustomerID}\nStore ID: {StoreID}\n=====================\n";
+            return $"=====================\nOrder ID: {OrderID}\nCustomer ID: {CustomerID}\nStore ID: {StoreID}\nTotal Spent: ${orderTotalCost.ToString("0.00")}\n=====================\n";
         }
 
     }

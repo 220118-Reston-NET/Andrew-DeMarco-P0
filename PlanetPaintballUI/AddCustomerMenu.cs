@@ -28,6 +28,11 @@ namespace PPUI
 
         public string UserChoice()
         {
+            //used to log user input to user.txt file
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.File("./logs/user.txt") 
+                .CreateLogger();
+
             string userInput = Console.ReadLine().ToUpper();
 
             switch (userInput)
@@ -44,19 +49,23 @@ namespace PPUI
                     //it makes them go back to the main menu
                     Console.WriteLine("Please enter your first name:");
                     string firstName = Console.ReadLine();
+                    Log.Information("User has entered in a first name.");
                     int failedAttempts = 0;
                     while((Regex.IsMatch(firstName, @"^[a-zA-Z]+$") == false))
                     {
                         if(failedAttempts > 2)
                         {
+                            Log.Warning("User has failed to match the first name formatting too many times. They are being redirected back to the main menu.");
                             Console.WriteLine("You failed to enter in the correct format for a name too many times. Taking you back to the main menu");
                             Console.WriteLine("Press any key to continue:");
                             Console.ReadLine();
                             return "MainMenu";
                         }
 
+                        Log.Warning("User failed to input a first name using correct format. Meaning they entered in an illegal character.");
                         Console.WriteLine("Invalid entry! Please enter your first name without spaces or punctuation marks:");
                         firstName = Console.ReadLine();
+                        Log.Information("User has entered in a first name.");
                         failedAttempts = failedAttempts + 1;
                     }
 
@@ -66,18 +75,22 @@ namespace PPUI
                     //it makes them go back to the main menu
                     Console.WriteLine("Please enter your last name:");
                     string lastName = Console.ReadLine();
+                    Log.Information("User has entered in a last name.");
                     failedAttempts = 0;
                     while((Regex.IsMatch(lastName, @"^[a-zA-Z]+$") == false))
                     {
                         if(failedAttempts > 2)
-                        {
+                        {   
+                            Log.Warning("User has failed to match the last name formatting too many times. They are being redirected back to the main menu.");
                             Console.WriteLine("You failed to enter in the correct format for a name too many times. Taking you back to the main menu");
                             Console.WriteLine("Press any key to continue:");
                             Console.ReadLine();
                             return "MainMenu";
                         }
-                        Console.WriteLine("Invalid entry! Please enter your last name without spaces or punctuation marks:");
+                        Log.Warning("User failed to input a last name using correct format. Meaning they entered in an illegal character.");
+                        Console.WriteLine("Invalid entry! Please enter your last name without spaces or punctuation marks:");                        
                         lastName = Console.ReadLine();
+                        Log.Information("User has entered in a last name.");
                         failedAttempts = failedAttempts + 1;
                     }
                     //adds the first and last name to the format that we will use for customer name object
@@ -89,18 +102,22 @@ namespace PPUI
                     //it makes them go back to the main menu
                     Console.WriteLine("Please enter your address:");
                     string address = Console.ReadLine();
+                    Log.Information("User has entered in an address.");
                     failedAttempts = 0;
                     while((Regex.IsMatch(address, @"^[#.0-9a-zA-Z\s,-]+$") == false))
                     {
                         if(failedAttempts > 2)
                         {
+                            Log.Warning("User has failed to match the address formatting too many times. They are being redirected back to the main menu.");
                             Console.WriteLine("You failed to enter in the correct format for a name too many times. Taking you back to the main menu");
                             Console.WriteLine("Press any key to continue:");
                             Console.ReadLine();
                             return "MainMenu";
                         }
+                        Log.Warning("User failed to input an address using correct format. Meaning they entered in an illegal character.");
                         Console.WriteLine("Invalid entry! Please enter your address wihout any illegal characters:");
                         address = Console.ReadLine();
+                        Log.Information("User has entered in an address.");
                         failedAttempts = failedAttempts + 1;
                     }
 
@@ -110,18 +127,22 @@ namespace PPUI
                     //it makes them go back to the main menu
                     Console.WriteLine("Please enter your email:");
                     string email = Console.ReadLine();
+                    Log.Information("User has entered in an email.");
                     failedAttempts = 0;
                     while((Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$") == false))
                     {
                         if(failedAttempts > 2)
                         {
+                            Log.Warning("User has failed to match the email formatting too many times. They are being redirected back to the main menu.");
                             Console.WriteLine("You failed to enter in the correct format for a name too many times. Taking you back to the main menu");
                             Console.WriteLine("Press any key to continue:");
                             Console.ReadLine();
                             return "MainMenu";
                         }
+                        Log.Warning("User failed to input an email using correct format. Meaning they entered in an illegal character.");
                         Console.WriteLine("Invalid entry! Please enter your email wihout any illegal characters:");
                         email = Console.ReadLine();
+                        Log.Information("User has entered in an email.");
                         failedAttempts = failedAttempts + 1;
                     }
 
@@ -131,13 +152,13 @@ namespace PPUI
                     _newCustomer.Email = email;
                     try
                     {
-                        Log.Information("Adding customer \n" + _newCustomer);
+                        Log.Information("Adding customer.");
                         _planetPaintballBL.AddCustomer(_newCustomer);
                         Log.Information("Successful at adding customer!");
                     }
                     catch (System.Exception exc)
                     {
-                        Log.Warning("Failed to add customer.");
+                        Log.Warning("Failed to add customer. Customer with that information may already exist.");
                         Console.WriteLine(exc.Message);
                         Console.WriteLine("Please press any key to continue");
                         Console.ReadLine();

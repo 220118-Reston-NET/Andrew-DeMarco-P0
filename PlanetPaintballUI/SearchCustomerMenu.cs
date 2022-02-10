@@ -27,6 +27,12 @@ namespace PPUI
 
         public string UserChoice()
         {
+
+            //used to log user input to user.txt file
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.File("./logs/user.txt") 
+                .CreateLogger();
+
             string userInput = Console.ReadLine().ToUpper();
 
             switch (userInput)
@@ -37,15 +43,19 @@ namespace PPUI
                     Console.WriteLine("2: Search by Name.");
                     string searchMode = Console.ReadLine();
                     
+                    
                     if(searchMode == "1")
                     {
+                        Log.Information("User is searching by email.");
                         searchMode = "email";
                         Console.WriteLine("Enter the email you want to search for:");
                         string customerEmail = Console.ReadLine();
+                        Log.Information("User entered an email.");
                         try
                         {
                             List<Customer> listOfCustomers = _planetPaintballBL.SearchCustomer(searchMode, customerEmail);
                             Console.WriteLine("Customer found. Here is their information:");
+                            Log.Information("The customer has been found. Customer information was displayed to user.");
                             foreach(var item in listOfCustomers)
                             {
                                 Console.WriteLine(item);
@@ -56,6 +66,7 @@ namespace PPUI
                         catch (System.Exception exc)
                         {
                             Console.WriteLine(exc.Message);
+                            Log.Warning("Customer with this information has not been found.");
                             Console.WriteLine("Please press any key to continue:");
                             Console.ReadLine();
                         }
@@ -63,13 +74,16 @@ namespace PPUI
                     }
                     else if(searchMode == "2")
                     {
+                        Log.Information("Customer is searching by name.");
                         searchMode = "name"; 
                         Console.WriteLine("Enter in the name you want to search for:");   
                         string customerName = Console.ReadLine();
+                        Log.Information("Customer has entered in a name.");
                         try
                         {
                             List<Customer> listOfCustomers = _planetPaintballBL.SearchCustomer(searchMode, customerName);
                             Console.WriteLine("Customer(s) found. Here is their information:");
+                            Log.Information("Customer(s) found. The customer(s) information has been displayed to user.");
                             foreach(var item in listOfCustomers)
                             {
                                 Console.WriteLine(item);
@@ -80,6 +94,7 @@ namespace PPUI
                         catch (System.Exception exc)
                         {
                             Console.WriteLine(exc.Message);
+                            Log.Warning("Customer has not been found.");
                             Console.WriteLine("Please press any key to continue:");
                             Console.ReadLine();
                         }
@@ -88,6 +103,7 @@ namespace PPUI
                     else
                     {
                         Console.WriteLine("You did not enter a menu option!");
+                        Log.Warning("User entered in an illegal menu option.");
                         Console.WriteLine("Press any key to continue:");
                         Console.ReadLine();
                     }

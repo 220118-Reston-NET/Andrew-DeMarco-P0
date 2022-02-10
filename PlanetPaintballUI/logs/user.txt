@@ -1,0 +1,9 @@
+2022-02-10 14:17:06.761 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-10 14:21:06.665 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-10 14:24:16.139 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-10 14:24:18.395 -05:00 [INF] Customer is searching by name.
+2022-02-10 14:24:19.880 -05:00 [INF] Customer has entered in a name.
+2022-02-10 14:24:20.207 -05:00 [INF] Customer(s) found. The customer(s) information has been displayed to user.
+2022-02-10 14:24:23.446 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-10 14:24:24.138 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-10 14:24:25.021 -05:00 [INF] Exiting application.

@@ -12,7 +12,43 @@ namespace PlanetPaintballTest
         /// [Fact] is a data annotation in C# 
         /// and will tell ther compiler that this method is a unit test
         [Fact]
-        public void StoreFrontShouldSetValidData()
+        public void StoreFrontShouldSetValidID()
+        {
+
+            //Arrange
+            StoreFront store = new StoreFront();
+            int validID = 1;
+
+            //Act
+            store.ID = validID;
+
+            //Assert
+            Assert.NotNull(store.ID);
+            Assert.Equal(validID, store.ID);
+
+        }
+        
+        
+
+        [Fact]
+        public void StoreFrontShouldSetValidName()
+        {
+
+            //Arrange
+            StoreFront store = new StoreFront();
+            string validName = "Planet Paintball";
+
+            //Act
+            store.Address = validName;
+
+            //Assert
+            Assert.NotNull(store.Name);
+            Assert.Equal(validName, store.Name);
+
+        }
+
+        [Fact]
+        public void StoreFrontShouldSetValidAddress()
         {
 
             //Arrange

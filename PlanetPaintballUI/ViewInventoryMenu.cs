@@ -27,12 +27,7 @@ namespace PPUI
 
         public string UserChoice()
         {
-
-            //used to log user input to user.txt file
-            Log.Logger = new LoggerConfiguration()
-                .WriteTo.File("./logs/user.txt") 
-                .CreateLogger();
-
+            
             string userInput = Console.ReadLine().ToUpper();
 
             switch(userInput)
@@ -66,6 +61,7 @@ namespace PPUI
                 
 
                 case "N":
+                    Log.Information("User is going back to the main menu.");
                     return "MainMenu";
 
                 default:

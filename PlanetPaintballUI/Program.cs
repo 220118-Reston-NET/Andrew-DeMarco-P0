@@ -67,6 +67,7 @@ while (repeat)
             repeat = false;
             break;
         default:
+            Log.Warning("User entered in an illegal menu option.");
             Console.WriteLine("Page does not exist!");
             break;
     }

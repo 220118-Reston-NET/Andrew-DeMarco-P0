@@ -228,6 +228,7 @@ namespace PPUI
                     return "PlaceOrder";
 
                 case "N":
+                    Log.Information("User is going back to the main menu.");
                     return "MainMenu";
                 default:
                     Console.WriteLine("Please input a valid response of Y or N.");

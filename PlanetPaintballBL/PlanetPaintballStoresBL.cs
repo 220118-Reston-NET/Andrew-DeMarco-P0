@@ -129,6 +129,10 @@ namespace PPBL
             return _repo.StartOrder(p_order);
         }
 
+        public bool TestQuantity(int p_id, int p_quantity)
+        {
+            return _repo.TestQuantity(p_id, p_quantity);
+        }
     }
 
 }

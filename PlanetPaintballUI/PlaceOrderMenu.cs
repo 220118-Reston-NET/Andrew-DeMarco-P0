@@ -113,13 +113,25 @@ namespace PPUI
                             {
                                 Console.WriteLine("How many would you like to buy?");
                                 int quantityOrdered = Convert.ToInt32(Console.ReadLine());
-                                LineItems _newLineItem = new LineItems();
-                                _newLineItem.ProductID = itemIDNum;
-                                _newLineItem.ProductQuantity = quantityOrdered;
                                 
-                                itemsOrdered.Add(_newLineItem);
-                                Log.Information("The item has been added.");
-                                Console.WriteLine("Adding your item!");
+                                if(_planetPaintballStoresBL.TestQuantity(itemIDNum, quantityOrdered))
+                                {
+                                    LineItems _newLineItem = new LineItems();
+                                    _newLineItem.ProductID = itemIDNum;
+                                    _newLineItem.ProductQuantity = quantityOrdered;
+                                    
+                                    itemsOrdered.Add(_newLineItem);
+                                    Log.Information("The item has been added.");
+                                    Console.WriteLine("Adding your item!");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("The quantity for the item you tried adding does not have enough in stock! Please re-add the item with available quantity.");
+                                    Console.WriteLine("Please press any key to continue: ");
+                                    Console.ReadLine();
+                                
+                                }
+                                
                             }
                             catch (System.Exception exc)
                             {
@@ -175,6 +187,7 @@ namespace PPUI
                         }
                         else if (orderMode == "3")
                         {
+
                             Log.Information("User is finalizing their order and checking out.");
                             userIsShopping = false;
                             Console.WriteLine("Checking out!");
@@ -203,7 +216,7 @@ namespace PPUI
                                         index ++;
                                     }
 
-                                   
+                                
                             }
                     
                             //display the total cost for their current cart
@@ -220,12 +233,23 @@ namespace PPUI
                             _planetPaintballStoresBL.StartOrder(_newOrder);
                             foreach(var item in itemsOrdered)
                             {
-                                _planetPaintballStoresBL.MakeOrder(item, _newOrder.OrderID);
+                                try
+                                {
+                                    _planetPaintballStoresBL.MakeOrder(item, _newOrder.OrderID);
+                                }
+                                catch(System.Exception exc)
+                                {
+                                    Console.WriteLine(exc.Message);
+                                    Log.Warning("User order was not able to be made. User most likely entered more items than available");
+                                    Console.WriteLine("Please press any key to continue:");
+                                    Console.ReadLine();
+                                }
                             }
                             Log.Information("Order has been made.");
                             Console.WriteLine("Please press any key to continue:");
                             Console.ReadLine();
-                        }
+    
+                        } 
                         else
                         {
                             Console.WriteLine("Please input a valid menu option of 1,2 or 3.");

@@ -63,6 +63,8 @@ namespace PPBL
         /// <param name="p_address"></param>
         /// <returns></returns>
         List<StoreFront> ViewAllStores();
+
+        Boolean TestQuantity(int itemID, int itemQuantity);
     }
 
 }

@@ -155,6 +155,47 @@ namespace PPDL
 
         }
 
+        public Boolean TestQuantity(int itemID, int itemQuantity)
+        {
+
+            //get the quantity from the database and see if that you have that many items in stock to buy
+            string sqlQuery = @"select sfp.quantity from storeFront_product sfp
+                            where sfp.productID = @productID";
+
+            //make a temp quantity to store that value for later
+            int tempQuantity = 0;
+            
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@productID", itemID);
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    tempQuantity = reader.GetInt32(0);
+                }
+
+                tempQuantity = tempQuantity - itemQuantity;
+                if(tempQuantity < 0)
+                {
+                    //will return false if the action cannot be done
+                    return false;
+                }
+                else
+                {
+                    //will return true if action can be done
+                    return true;
+                }
+                
+            }
+            
+            
+        }
+
         public LineItems MakeOrder(LineItems p_lineItems, int p_orderID)
         {         
             //get the quantity from the database and see if that you have that many items in stock to buy

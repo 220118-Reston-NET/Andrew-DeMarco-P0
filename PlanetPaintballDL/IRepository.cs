@@ -78,6 +78,13 @@ namespace PPDL
         /// <param name="p_productID"></param>
         /// <param name="p_quantity"></param>
         void UpdateInventory(int p_productID, int p_quantity);
+
+        /// <summary>
+        /// used to test to see if user can buy this amount of items
+        /// </summary>
+        /// <param name="p_lineItems"></param>
+        /// <returns></returns>
+        Boolean TestQuantity(int itemID, int itemQuantity);
     }
 
 

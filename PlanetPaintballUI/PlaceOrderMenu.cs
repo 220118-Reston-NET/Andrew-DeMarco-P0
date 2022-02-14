@@ -58,8 +58,19 @@ namespace PPUI
                     }
 
 
-                    Console.WriteLine("Enter the Store location You wish to buy from:");
+                    Console.WriteLine("Enter the Store location You wish to buy from or if you need to see all stores, type \"all\":");
                     string storeLocation = Console.ReadLine();
+                    if(storeLocation == "all")
+                    {
+                        Log.Information("User asked to see all stores, showing them that infomation now.");
+                        List<StoreFront> listOfAllStores = _planetPaintballStoresBL.ViewAllStores();
+                        foreach (StoreFront item in listOfAllStores)
+                        {
+                            Console.WriteLine(item.printStoreInfo());
+                        }
+                        Console.WriteLine("====================\nFrom the list of stores above, type the address of the store you want to view.");
+                        storeLocation = Console.ReadLine();
+                    }
                     Log.Information("User entered in a store location.");
                     try
                     {

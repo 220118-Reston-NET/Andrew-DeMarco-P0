@@ -14,10 +14,19 @@ namespace PPBL
             _repo = p_repo;
         }
 
+        public List<StoreFront> ViewAllStores()
+        {
+
+            List<StoreFront> listOfAllStores = _repo.GetStoreFronts();
+            return listOfAllStores;
+        
+        }
+
         public List<StoreFront> ViewInventory(string p_address)
         {
 
             List<StoreFront> listOfStores = _repo.GetStoreFronts();
+
             var found = listOfStores.Find(p => p.Address.Equals(p_address));
             if(found != null)
             {

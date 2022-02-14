@@ -57,8 +57,12 @@ namespace PPBL
         /// <returns></returns>
         List<Orders> GetOrders(string searchMode, string seachedString);
 
-        
-
+        /// <summary>
+        /// will list all the stores for the user if they do not know the address of the one they want to view
+        /// </summary>
+        /// <param name="p_address"></param>
+        /// <returns></returns>
+        List<StoreFront> ViewAllStores();
     }
 
 }

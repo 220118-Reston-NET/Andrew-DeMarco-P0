@@ -67,3 +67,318 @@
 2022-02-10 17:02:23.879 -05:00 [INF] User is going back to the main menu.
 2022-02-10 17:02:23.879 -05:00 [INF] Displaying the MainMenu to user.
 2022-02-10 17:02:26.700 -05:00 [INF] Exiting application.
+2022-02-11 12:48:52.913 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-11 12:48:56.699 -05:00 [INF] User entered in a store location.
+2022-02-11 12:48:57.589 -05:00 [INF] Displayed list of items store has to user.
+2022-02-11 12:49:05.789 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-11 12:49:06.336 -05:00 [INF] User is going back to the main menu.
+2022-02-11 12:49:06.336 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-11 12:49:07.728 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-11 12:49:13.047 -05:00 [INF] User entered in their email.
+2022-02-11 12:49:15.591 -05:00 [INF] User entered in a store location.
+2022-02-11 12:49:15.636 -05:00 [INF] Displayed list of items the user can buy.
+2022-02-11 12:50:11.254 -05:00 [INF] User is adding an item to their order.
+2022-02-11 12:50:12.992 -05:00 [INF] The item has been added.
+2022-02-11 12:50:14.183 -05:00 [INF] User is finalizing their order and checking out.
+2022-02-11 12:50:14.211 -05:00 [INF] Final order has been displayed to the user.
+2022-02-11 12:50:14.696 -05:00 [INF] Order has been made.
+2022-02-11 12:50:17.100 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-11 12:50:18.225 -05:00 [INF] User is going back to the main menu.
+2022-02-11 12:50:18.225 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-11 12:50:19.629 -05:00 [INF] Exiting application.
+2022-02-14 10:12:24.268 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-14 10:12:29.646 -05:00 [INF] User entered in their email.
+2022-02-14 10:12:32.947 -05:00 [INF] User entered in a store location.
+2022-02-14 10:12:33.038 -05:00 [INF] Displayed list of items the user can buy.
+2022-02-14 10:12:36.957 -05:00 [INF] User is adding an item to their order.
+2022-02-14 10:12:40.975 -05:00 [INF] The item has been added.
+2022-02-14 10:12:43.434 -05:00 [INF] User is adding an item to their order.
+2022-02-14 10:12:51.426 -05:00 [INF] The item has been added.
+2022-02-14 10:12:52.078 -05:00 [INF] User is viewing their current order.
+2022-02-14 10:12:52.148 -05:00 [INF] The current order has been displayed to the user.
+2022-02-14 10:13:10.597 -05:00 [INF] User is finalizing their order and checking out.
+2022-02-14 10:13:10.650 -05:00 [INF] Final order has been displayed to the user.
+2022-02-14 10:13:11.301 -05:00 [INF] Order has been made.
+2022-02-14 10:13:13.372 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-14 10:13:14.532 -05:00 [INF] User is going back to the main menu.
+2022-02-14 10:13:14.532 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 10:13:16.387 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 10:13:18.394 -05:00 [INF] User is searching by email.
+2022-02-14 10:13:21.009 -05:00 [INF] User has entered in an email.
+2022-02-14 10:13:21.119 -05:00 [INF] The order history is being displayed to the user.
+2022-02-14 10:13:24.911 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 10:13:25.667 -05:00 [INF] User is going back to the main menu.
+2022-02-14 10:13:25.668 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 10:13:26.769 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-14 10:13:32.915 -05:00 [INF] User entered in their email.
+2022-02-14 10:13:41.578 -05:00 [INF] User entered in a store location.
+2022-02-14 10:13:41.633 -05:00 [INF] Displayed list of items the user can buy.
+2022-02-14 10:13:52.065 -05:00 [INF] User is adding an item to their order.
+2022-02-14 10:13:54.239 -05:00 [INF] The item has been added.
+2022-02-14 10:14:10.424 -05:00 [INF] User is finalizing their order and checking out.
+2022-02-14 10:14:10.452 -05:00 [INF] Final order has been displayed to the user.
+2022-02-14 10:14:10.666 -05:00 [INF] Order has been made.
+2022-02-14 10:14:12.163 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-14 10:14:13.411 -05:00 [INF] User is going back to the main menu.
+2022-02-14 10:14:13.411 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 10:14:15.058 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 10:14:17.405 -05:00 [INF] User is searching by store address.
+2022-02-14 10:14:20.771 -05:00 [INF] Displaying order history to user.
+2022-02-14 10:21:25.253 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 10:21:27.383 -05:00 [INF] User is searching by email.
+2022-02-14 10:21:30.479 -05:00 [INF] User has entered in an email.
+2022-02-14 10:21:30.772 -05:00 [INF] The order history is being displayed to the user.
+2022-02-14 10:21:32.290 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 10:21:34.118 -05:00 [INF] User is searching by store address.
+2022-02-14 10:21:37.663 -05:00 [WRN] The order history was not able to be found. Information entered by user does not exist.
+2022-02-14 10:21:40.267 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 10:21:40.945 -05:00 [WRN] User entered an illegal menu option.
+2022-02-14 10:21:41.712 -05:00 [WRN] User entered in an illegal menu option.
+2022-02-14 10:21:43.096 -05:00 [INF] User is searching by email.
+2022-02-14 10:21:47.512 -05:00 [INF] User has entered in an email.
+2022-02-14 10:21:47.594 -05:00 [INF] The order history is being displayed to the user.
+2022-02-14 10:23:16.663 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 10:23:18.092 -05:00 [INF] User is going back to the main menu.
+2022-02-14 10:23:18.092 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 10:23:21.649 -05:00 [INF] Displaying the ReplenishInventoryMenu to user.
+2022-02-14 10:23:24.906 -05:00 [INF] User entered in a store location.
+2022-02-14 10:23:41.067 -05:00 [INF] User entered in a product id to replenish the inventory for.
+2022-02-14 10:23:41.914 -05:00 [INF] User entered the amount they want to add to the total inventory of the product.
+2022-02-14 10:23:41.984 -05:00 [INF] Item successfully replenished.
+2022-02-14 10:23:42.880 -05:00 [INF] Displaying the ReplenishInventoryMenu to user.
+2022-02-14 10:23:43.632 -05:00 [INF] User is going back to the main menu.
+2022-02-14 10:23:43.632 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 10:23:46.480 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 10:23:49.037 -05:00 [INF] User entered in a store location.
+2022-02-14 10:23:49.060 -05:00 [WRN] No store found with that address.
+2022-02-14 10:23:52.275 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 10:23:53.889 -05:00 [WRN] User entered in an illegal menu option.
+2022-02-14 10:23:54.738 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 10:23:58.611 -05:00 [INF] User entered in a store location.
+2022-02-14 10:23:58.652 -05:00 [INF] Displayed list of items store has to user.
+2022-02-14 10:24:00.462 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 10:24:32.946 -05:00 [INF] User is going back to the main menu.
+2022-02-14 10:24:32.946 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 10:24:34.453 -05:00 [INF] Exiting application.
+2022-02-14 10:50:20.825 -05:00 [INF] Exiting application.
+2022-02-14 10:50:25.661 -05:00 [INF] Exiting application.
+2022-02-14 10:50:35.236 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-14 10:50:44.785 -05:00 [INF] User has entered in a first name.
+2022-02-14 10:50:44.794 -05:00 [WRN] User failed to input a first name using correct format. Meaning they entered in an illegal character.
+2022-02-14 10:50:47.401 -05:00 [INF] User has entered in a first name.
+2022-02-14 10:50:47.401 -05:00 [WRN] User failed to input a first name using correct format. Meaning they entered in an illegal character.
+2022-02-14 10:50:55.039 -05:00 [INF] User has entered in a first name.
+2022-02-14 10:50:55.982 -05:00 [INF] User has entered in a last name.
+2022-02-14 10:51:02.813 -05:00 [INF] User has entered in an address.
+2022-02-14 10:51:02.814 -05:00 [WRN] User failed to input an address using correct format. Meaning they entered in an illegal character.
+2022-02-14 10:51:08.257 -05:00 [INF] User has entered in an address.
+2022-02-14 10:51:16.050 -05:00 [INF] User has entered in an email.
+2022-02-14 10:51:16.051 -05:00 [WRN] User failed to input an email using correct format. Meaning they entered in an illegal character.
+2022-02-14 10:51:20.839 -05:00 [INF] User has entered in an email.
+2022-02-14 10:51:20.840 -05:00 [INF] Adding customer.
+2022-02-14 10:51:21.229 -05:00 [INF] Successful at adding customer!
+2022-02-14 10:51:21.229 -05:00 [INF] Displaying the AddCustomerMenu to user.
+2022-02-14 10:51:22.794 -05:00 [INF] User is going back to the main menu.
+2022-02-14 10:51:22.794 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 10:51:23.649 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-14 10:51:25.927 -05:00 [INF] User is searching by email.
+2022-02-14 10:51:30.269 -05:00 [INF] User entered an email.
+2022-02-14 10:51:30.310 -05:00 [INF] The customer has been found. Customer information was displayed to user.
+2022-02-14 10:51:37.398 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-14 10:51:39.953 -05:00 [INF] Customer is searching by name.
+2022-02-14 10:51:40.989 -05:00 [INF] Customer has entered in a name.
+2022-02-14 10:51:41.014 -05:00 [INF] Customer(s) found. The customer(s) information has been displayed to user.
+2022-02-14 10:51:44.968 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-14 10:51:46.228 -05:00 [INF] User is going back to the main menu.
+2022-02-14 10:51:46.228 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 10:51:58.084 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 10:52:02.993 -05:00 [INF] User entered in a store location.
+2022-02-14 10:52:02.993 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 10:54:54.721 -05:00 [WRN] No store found with that address.
+2022-02-14 10:54:55.659 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 10:55:03.161 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 10:55:05.387 -05:00 [INF] User entered in a store location.
+2022-02-14 10:55:05.387 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:05:51.361 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:05:53.577 -05:00 [INF] User entered in a store location.
+2022-02-14 11:05:53.577 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:08:25.324 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:08:28.032 -05:00 [INF] User entered in a store location.
+2022-02-14 11:08:28.032 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:15:09.696 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:15:12.511 -05:00 [INF] User entered in a store location.
+2022-02-14 11:15:12.511 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:16:56.537 -05:00 [WRN] No store found with that address.
+2022-02-14 11:16:59.431 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:17:03.404 -05:00 [INF] User entered in a store location.
+2022-02-14 11:17:03.478 -05:00 [INF] Displayed list of items store has to user.
+2022-02-14 11:17:11.620 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:17:13.394 -05:00 [INF] User entered in a store location.
+2022-02-14 11:17:13.394 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:18:53.629 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:18:56.158 -05:00 [INF] User entered in a store location.
+2022-02-14 11:18:56.158 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:20:50.862 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:20:54.851 -05:00 [INF] User entered in a store location.
+2022-02-14 11:20:54.852 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:22:33.995 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:22:36.334 -05:00 [INF] User entered in a store location.
+2022-02-14 11:22:36.334 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:41:25.520 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-14 11:41:28.458 -05:00 [INF] Customer is searching by name.
+2022-02-14 11:41:29.389 -05:00 [INF] Customer has entered in a name.
+2022-02-14 11:41:29.740 -05:00 [INF] Customer(s) found. The customer(s) information has been displayed to user.
+2022-02-14 11:41:32.058 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-14 11:41:34.487 -05:00 [INF] Customer is searching by name.
+2022-02-14 11:41:36.595 -05:00 [INF] Customer has entered in a name.
+2022-02-14 11:41:36.619 -05:00 [INF] Customer(s) found. The customer(s) information has been displayed to user.
+2022-02-14 11:41:38.364 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-14 11:41:41.476 -05:00 [INF] User is searching by email.
+2022-02-14 11:41:42.744 -05:00 [INF] User entered an email.
+2022-02-14 11:41:42.768 -05:00 [WRN] Customer with this information has not been found.
+2022-02-14 11:41:44.236 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-14 11:41:46.136 -05:00 [INF] User is searching by email.
+2022-02-14 11:41:50.971 -05:00 [INF] User entered an email.
+2022-02-14 11:41:50.992 -05:00 [INF] The customer has been found. Customer information was displayed to user.
+2022-02-14 11:41:53.556 -05:00 [INF] Displaying the SearchCustomerMenu to user.
+2022-02-14 11:41:54.352 -05:00 [INF] User is going back to the main menu.
+2022-02-14 11:41:54.352 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 11:41:55.651 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:41:57.510 -05:00 [INF] User entered in a store location.
+2022-02-14 11:41:57.510 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:43:52.958 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:43:55.552 -05:00 [INF] User entered in a store location.
+2022-02-14 11:43:55.552 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:44:46.237 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:44:48.214 -05:00 [INF] User entered in a store location.
+2022-02-14 11:44:48.214 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:45:46.799 -05:00 [INF] Displayed list of items store has to user.
+2022-02-14 11:45:48.528 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:45:49.194 -05:00 [INF] User is going back to the main menu.
+2022-02-14 11:45:49.194 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 11:45:50.581 -05:00 [INF] Exiting application.
+2022-02-14 11:55:14.331 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:55:16.696 -05:00 [INF] User entered in a store location.
+2022-02-14 11:55:16.696 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:56:20.466 -05:00 [INF] Displayed list of items store has to user.
+2022-02-14 11:56:27.120 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 11:56:27.865 -05:00 [INF] User is going back to the main menu.
+2022-02-14 11:56:27.865 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 11:56:29.779 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-14 11:56:33.944 -05:00 [INF] User entered in their email.
+2022-02-14 11:56:36.155 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 11:56:39.970 -05:00 [INF] User entered in a store location.
+2022-02-14 11:56:40.015 -05:00 [INF] Displayed list of items the user can buy.
+2022-02-14 11:56:42.107 -05:00 [INF] User is adding an item to their order.
+2022-02-14 11:56:44.030 -05:00 [INF] The item has been added.
+2022-02-14 11:56:45.463 -05:00 [INF] User is finalizing their order and checking out.
+2022-02-14 11:56:45.503 -05:00 [INF] Final order has been displayed to the user.
+2022-02-14 11:56:45.968 -05:00 [INF] Order has been made.
+2022-02-14 11:56:46.942 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-14 11:56:47.884 -05:00 [INF] User is going back to the main menu.
+2022-02-14 11:56:47.885 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 11:56:49.432 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 11:56:52.597 -05:00 [INF] User is searching by email.
+2022-02-14 11:56:56.855 -05:00 [INF] User has entered in an email.
+2022-02-14 11:56:56.943 -05:00 [INF] The order history is being displayed to the user.
+2022-02-14 12:05:36.120 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 12:05:38.159 -05:00 [INF] User is searching by store address.
+2022-02-14 12:05:39.298 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 12:05:44.437 -05:00 [INF] Displaying order history to user.
+2022-02-14 12:05:49.853 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 12:05:50.559 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:05:50.559 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:05:51.904 -05:00 [INF] Exiting application.
+2022-02-14 12:13:41.029 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-14 12:13:46.965 -05:00 [INF] User entered in their email.
+2022-02-14 12:13:49.690 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 12:13:57.826 -05:00 [INF] User entered in a store location.
+2022-02-14 12:13:57.896 -05:00 [INF] Displayed list of items the user can buy.
+2022-02-14 12:13:59.593 -05:00 [INF] User is adding an item to their order.
+2022-02-14 12:14:19.716 -05:00 [INF] The item has been added.
+2022-02-14 12:14:21.567 -05:00 [INF] User is adding an item to their order.
+2022-02-14 12:14:37.790 -05:00 [INF] The item has been added.
+2022-02-14 12:14:41.000 -05:00 [INF] User is viewing their current order.
+2022-02-14 12:14:41.048 -05:00 [INF] The current order has been displayed to the user.
+2022-02-14 12:15:10.096 -05:00 [INF] User is finalizing their order and checking out.
+2022-02-14 12:15:10.144 -05:00 [INF] Final order has been displayed to the user.
+2022-02-14 12:15:10.616 -05:00 [INF] Order has been made.
+2022-02-14 12:15:20.474 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-14 12:15:21.443 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:15:21.444 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:15:23.913 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 12:15:26.581 -05:00 [INF] User is searching by email.
+2022-02-14 12:15:29.388 -05:00 [INF] User has entered in an email.
+2022-02-14 12:15:29.473 -05:00 [INF] The order history is being displayed to the user.
+2022-02-14 12:15:43.600 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 12:15:45.402 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:15:45.402 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:15:47.392 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 12:15:51.374 -05:00 [INF] User is searching by store address.
+2022-02-14 12:15:53.377 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 12:15:55.550 -05:00 [INF] Displaying order history to user.
+2022-02-14 12:15:59.959 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 12:16:01.486 -05:00 [INF] User is searching by store address.
+2022-02-14 12:16:11.068 -05:00 [INF] Displaying order history to user.
+2022-02-14 12:16:13.122 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 12:16:13.918 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:16:13.918 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:16:19.581 -05:00 [INF] Exiting application.
+2022-02-14 12:16:23.286 -05:00 [INF] Displaying the ReplenishInventoryMenu to user.
+2022-02-14 12:16:25.907 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 12:16:35.592 -05:00 [INF] User entered in a store location.
+2022-02-14 12:16:40.568 -05:00 [INF] User entered in a product id to replenish the inventory for.
+2022-02-14 12:16:43.055 -05:00 [INF] User entered the amount they want to add to the total inventory of the product.
+2022-02-14 12:16:43.133 -05:00 [INF] Item successfully replenished.
+2022-02-14 12:16:44.111 -05:00 [INF] Displaying the ReplenishInventoryMenu to user.
+2022-02-14 12:16:45.974 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:16:45.974 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:16:49.604 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 12:16:52.136 -05:00 [INF] User is searching by store address.
+2022-02-14 12:16:58.398 -05:00 [INF] Displaying order history to user.
+2022-02-14 12:17:00.781 -05:00 [INF] Displaying the ViewOrderHistoyMenu to user.
+2022-02-14 12:17:01.455 -05:00 [WRN] User entered an illegal menu option.
+2022-02-14 12:17:02.093 -05:00 [WRN] User entered in an illegal menu option.
+2022-02-14 12:17:02.583 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:17:02.584 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:17:04.495 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 12:17:11.426 -05:00 [INF] User entered in a store location.
+2022-02-14 12:17:11.482 -05:00 [INF] Displayed list of items store has to user.
+2022-02-14 12:17:47.975 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 12:17:48.738 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:17:48.738 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:17:54.151 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-14 12:18:00.737 -05:00 [INF] User entered in their email.
+2022-02-14 12:18:09.455 -05:00 [INF] User entered in a store location.
+2022-02-14 12:18:09.523 -05:00 [INF] Displayed list of items the user can buy.
+2022-02-14 12:18:20.028 -05:00 [INF] User is adding an item to their order.
+2022-02-14 12:18:22.461 -05:00 [INF] The item has been added.
+2022-02-14 12:18:23.802 -05:00 [INF] User is finalizing their order and checking out.
+2022-02-14 12:18:23.831 -05:00 [INF] Final order has been displayed to the user.
+2022-02-14 12:18:24.257 -05:00 [INF] Order has been made.
+2022-02-14 12:18:25.460 -05:00 [INF] Displaying the PlaceOrderMenu to user.
+2022-02-14 12:18:26.503 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:18:26.503 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:18:29.852 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 12:18:36.894 -05:00 [INF] User entered in a store location.
+2022-02-14 12:18:36.949 -05:00 [INF] Displayed list of items store has to user.
+2022-02-14 12:18:46.907 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 12:18:47.679 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:18:47.679 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:18:50.268 -05:00 [INF] Displaying the ReplenishInventoryMenu to user.
+2022-02-14 12:18:53.403 -05:00 [INF] User asked to see all stores, showing them that infomation now.
+2022-02-14 12:18:58.203 -05:00 [INF] User entered in a store location.
+2022-02-14 12:18:59.717 -05:00 [INF] User entered in a product id to replenish the inventory for.
+2022-02-14 12:19:00.572 -05:00 [INF] User entered the amount they want to add to the total inventory of the product.
+2022-02-14 12:19:00.677 -05:00 [INF] Item successfully replenished.
+2022-02-14 12:19:02.040 -05:00 [INF] Displaying the ReplenishInventoryMenu to user.
+2022-02-14 12:19:02.732 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:19:02.732 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:19:04.395 -05:00 [INF] Exiting application.
+2022-02-14 12:19:10.583 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 12:19:17.327 -05:00 [INF] User entered in a store location.
+2022-02-14 12:19:17.692 -05:00 [INF] Displayed list of items store has to user.
+2022-02-14 12:19:21.811 -05:00 [INF] Displaying the ViewInventoryMenu to user.
+2022-02-14 12:19:22.573 -05:00 [INF] User is going back to the main menu.
+2022-02-14 12:19:22.573 -05:00 [INF] Displaying the MainMenu to user.
+2022-02-14 12:19:23.951 -05:00 [INF] Exiting application.

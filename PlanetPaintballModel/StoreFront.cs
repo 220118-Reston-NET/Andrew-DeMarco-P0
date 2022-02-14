@@ -48,6 +48,8 @@ namespace PPModel
         //string version of the object
         public override string ToString()
         {   
+
+            Console.WriteLine(Name + Address);
             string items = "=================\n";
             foreach(Products item in _products)
             {  
@@ -57,6 +59,13 @@ namespace PPModel
             return items;
                 
         }
+
+        public string printStoreInfo()
+        {
+            return "====================\nStore Name: " + Name + "\nStore Address: " + Address;
+        }
+
+        
 
     }
 

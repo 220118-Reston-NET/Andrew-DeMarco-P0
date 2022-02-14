@@ -79,8 +79,19 @@ namespace PPUI
                     {
                         Log.Information("User is searching by store address.");
                         searchMode = "storeAddress";
-                        Console.WriteLine("Enter the store location you want to search for:");
+                        Console.WriteLine("Enter the store location you want to search for or if you need to see all stores, type \"all\":");
                         String storeLocation = Console.ReadLine();
+                        if(storeLocation == "all")
+                        {
+                            Log.Information("User asked to see all stores, showing them that infomation now.");
+                            List<StoreFront> listOfAllStores = _planetPaintballStoresBL.ViewAllStores();
+                            foreach (StoreFront item in listOfAllStores)
+                            {
+                                Console.WriteLine(item.printStoreInfo());
+                            }
+                                Console.WriteLine("====================\nFrom the list of stores above, type the address of the store you want to view.");
+                                storeLocation = Console.ReadLine();
+                        }
                         try
                         {
                             List<StoreFront> listOfStores = _planetPaintballStoresBL.ViewInventory(storeLocation);

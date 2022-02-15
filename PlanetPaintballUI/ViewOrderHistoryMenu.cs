@@ -57,6 +57,10 @@ namespace PPUI
                             Console.WriteLine("Customer found. Here is "+ listOfCustomers[0].Name +"'s order history information:");
 
                             List<Orders> listOfCustomerOrders = _planetPaintballStoresBL.GetOrders(searchMode, customerEmail);
+                            if(listOfCustomerOrders.Count == 0)
+                            {
+                                Console.WriteLine("User has not made any orders yet.");
+                            }
                             foreach(var item in listOfCustomerOrders)
                             {
                                 Console.WriteLine(item);
@@ -98,6 +102,10 @@ namespace PPUI
                             Console.WriteLine("Store found. Here is the order history of " + listOfStores[0].Name + " " + listOfStores[0].Address+ ":");
  
                             List<Orders> listOfStoreOrders = _planetPaintballStoresBL.GetOrders(searchMode, storeLocation);
+                            if(listOfStoreOrders.Count == 0)
+                            {
+                                Console.WriteLine("Store has not had any orders yet.");
+                            }
                             foreach(var item in listOfStoreOrders)
                             {
                                 Console.WriteLine(item);

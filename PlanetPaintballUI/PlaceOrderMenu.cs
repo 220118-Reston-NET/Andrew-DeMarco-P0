@@ -114,6 +114,7 @@ namespace PPUI
                         Console.WriteLine("1: Add a product to my order.");
                         Console.WriteLine("2: View my current Order.");
                         Console.WriteLine("3: Check out.");
+                        Console.WriteLine("4: Cancel order(will bring you back to the main menu).");
                         string orderMode = Console.ReadLine();
 
                         if(orderMode == "1")
@@ -273,10 +274,16 @@ namespace PPUI
                             }
 
                         }
-                             
+                        else if (orderMode == "4")
+                        {
+                            Console.WriteLine("Your order has been cancelled. Taking you back to the main menu.");
+                            Console.WriteLine("Press any key to continue: ");
+                            Console.ReadLine();
+                            return "MainMenu";
+                        }
                         else
                         {
-                            Console.WriteLine("Please input a valid menu option of 1,2 or 3.");
+                            Console.WriteLine("Please input a valid menu option of 1,2, 3 or 4.");
                             Log.Information("User has entered in an illegal menu option.");
                             Console.WriteLine("Press any key to continue:");
                             Console.ReadLine();

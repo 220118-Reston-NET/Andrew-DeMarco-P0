@@ -54,13 +54,25 @@ namespace PPUI
                         List<StoreFront> listOfStores = _planetPaintballStoresBL.ViewInventory(storeLocation);
                         Console.WriteLine("Here is the list of products that store has:");
                         List<Products> listOfStoreProducts = _planetPaintballStoresBL.GetProductsByStoreAddress(storeLocation);
-                        foreach (Products item in listOfStoreProducts)
+                        if(listOfStoreProducts.Count == 0)
                         {
-                            Console.WriteLine(item);
+                            Console.WriteLine("This store has no products at this time.");
+                            Console.WriteLine("Taking you back to the View Inventory Menu");
+                            Console.WriteLine("Please press any key to continue: ");
+                            Console.ReadLine();
+                            return "ViewInventory";
                         }
-                        Log.Information("Displayed list of items store has to user.");
-                        Console.WriteLine("Press any key to continue:");
-                        Console.ReadLine();
+                        else
+                        {
+                            foreach (Products item in listOfStoreProducts)
+                            {
+                                Console.WriteLine(item);
+                            }
+                            Log.Information("Displayed list of items store has to user.");
+                            Console.WriteLine("Press any key to continue:");
+                            Console.ReadLine();
+                        }
+                        
                     }  
                     catch(System.Exception exc)
                     {

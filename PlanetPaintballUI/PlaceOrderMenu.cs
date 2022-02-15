@@ -77,11 +77,23 @@ namespace PPUI
                         List<StoreFront> listOfStores = _planetPaintballStoresBL.ViewInventory(storeLocation);
                         Console.WriteLine("Here is the list of possible products you can order:");
                         List<Products> listOfStoreProducts = _planetPaintballStoresBL.GetProductsByStoreAddress(storeLocation);
-                        foreach(var item in listOfStoreProducts)
+                        if(listOfStoreProducts.Count == 0)
                         {
-                            Console.WriteLine(item);
+                            Console.WriteLine("This store has no products at this time.");
+                            Console.WriteLine("Taking you back to the Place Order Menu");
+                            Console.WriteLine("Please press any key to continue: ");
+                            Console.ReadLine();
+                            return "PlaceOrder";
                         }
-                        Log.Information("Displayed list of items the user can buy.");
+                        else
+                        {
+                            foreach(var item in listOfStoreProducts)
+                            {
+                                Console.WriteLine(item);
+                            }
+                            Log.Information("Displayed list of items the user can buy.");
+                        }
+                        
                     }
                     catch(System.Exception exc)
                     {
@@ -230,26 +242,38 @@ namespace PPUI
                             _newOrder.orderTotalCost = cartTotal;
                             _newOrder.LineItems = itemsOrdered;
                             
-                            _planetPaintballStoresBL.StartOrder(_newOrder);
-                            foreach(var item in itemsOrdered)
+                            if(cartTotal == 0.00m)
                             {
-                                try
-                                {
-                                    _planetPaintballStoresBL.MakeOrder(item, _newOrder.OrderID);
-                                }
-                                catch(System.Exception exc)
-                                {
-                                    Console.WriteLine(exc.Message);
-                                    Log.Warning("User order was not able to be made. User most likely entered more items than available");
-                                    Console.WriteLine("Please press any key to continue:");
-                                    Console.ReadLine();
-                                }
+                                Console.WriteLine("Cannot place order with 0 items in cart! Please add at least one item before checking out.");
+                                Console.WriteLine("Press any key to continue:");
+                                userIsShopping = true;
+                                Console.ReadLine();
                             }
-                            Log.Information("Order has been made.");
-                            Console.WriteLine("Please press any key to continue:");
-                            Console.ReadLine();
-    
-                        } 
+                            else
+                            {
+
+                                _planetPaintballStoresBL.StartOrder(_newOrder);
+                                foreach(var item in itemsOrdered)
+                                {
+                                    try
+                                    {
+                                        _planetPaintballStoresBL.MakeOrder(item, _newOrder.OrderID);
+                                    }
+                                    catch(System.Exception exc)
+                                    {
+                                        Console.WriteLine(exc.Message);
+                                        Log.Warning("User order was not able to be made. User most likely entered more items than available");
+                                        Console.WriteLine("Please press any key to continue:");
+                                        Console.ReadLine();
+                                    }
+                                }
+                                Log.Information("Order has been made.");
+                                Console.WriteLine("Please press any key to continue:");
+                                Console.ReadLine();
+                            }
+
+                        }
+                             
                         else
                         {
                             Console.WriteLine("Please input a valid menu option of 1,2 or 3.");

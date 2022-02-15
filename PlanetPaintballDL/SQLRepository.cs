@@ -357,7 +357,9 @@ namespace PPDL
         {
             List<Orders> listOfOrders = new List<Orders>();
 
-            string sqlQuery = @"select * from Orders";
+            string sqlQuery = @"select o.orderID, o.customerID, c.customerEmail, o.storeFrontID, s.storeFrontName, o.totalSpent from Orders o
+                                inner join Customer c on o.customerID = c.customerID
+                                inner join StoreFront s on s.storeFrontID = o.storeFrontID";
 
             using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
@@ -379,9 +381,11 @@ namespace PPDL
 
                         OrderID = reader.GetInt32(0),
                         CustomerID = reader.GetInt32(1),
-                        StoreID = reader.GetInt32(2),
-                        orderTotalCost = reader.GetDecimal(3)
-
+                        customerEmail = reader.GetString(2),
+                        StoreID = reader.GetInt32(3),
+                        storeFrontName = reader.GetString(4),
+                        orderTotalCost = reader.GetDecimal(5)
+                        
                     });
 
                 }
